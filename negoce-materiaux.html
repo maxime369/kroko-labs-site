@@ -600,6 +600,52 @@ td.no{color:var(--soft)}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* Impression (8 novembre 2026) : sans ces règles, les titres en dégradé, les boutons et les cartes
+   disparaissent sur papier, car les navigateurs n'impriment pas les fonds par défaut. */
+@media print{
+  @page{margin:14mm 12mm}
+  html,body{background:#fff!important;color:#0D0D12!important}
+  body{font-size:10.5pt;line-height:1.45}
+  *,*::before,*::after{animation:none!important;transition:none!important;box-shadow:none!important;text-shadow:none!important}
+  /* Éléments d'écran inutiles sur papier */
+  .site-h,.skip,#intro,.voice,.hero-photo,.sig,.hero-cta,.cta-band,.more-row,.f-grid,.burger,.tour-seg,.tour-nav,.tour-auto,.replay,.swipe,.book-msg{display:none!important}
+  /* Titres : la ligne en dégradé passe en violet plein */
+  .l2{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:#882AFF!important;color:#882AFF!important;padding:0!important;margin:0!important}
+  h1{font-size:28pt!important;line-height:1.1!important}
+  h2{font-size:17pt!important}
+  h1,h2,h3,.trade{break-after:avoid;page-break-after:avoid}
+  h1,h2,h3{break-inside:avoid;page-break-inside:avoid}
+  p,li{orphans:3;widows:3}
+  /* Moins de vide */
+  .hero{background:none!important;padding:8px 0 4px!important}
+  .sec{padding:18px 0!important}
+  .team{margin-top:16px!important}
+  /* Cartes : fin contour à la place du fond, jamais coupées en deux */
+  .card,.person,.sector,.data-card,.compat-card,.door,.who>div,.rule,.gains>*,.stat,.faq details{background:#fff!important;border:1px solid #D0D5DD!important;break-inside:avoid;page-break-inside:avoid}
+  .rows li{break-inside:avoid}
+  /* Cartes sombres (moteur de règles…) : texte foncé et contour épais au lieu du fond noir */
+  .who>div.rule,.card.inv{color:#0D0D12!important;border:2px solid #0D0D12!important}
+  .who>div.rule *,.card.inv *{color:#0D0D12!important}
+  /* Le calculateur reste d'un seul tenant */
+  .c2,.calc-dark{break-inside:avoid;page-break-inside:avoid}
+  /* Boutons restants : texte violet, contour */
+  .btn{background:none!important;color:#882AFF!important;-webkit-text-fill-color:#882AFF!important;border:1px solid #882AFF!important;min-height:0!important;padding:4px 14px!important}
+  /* Écrans d'app, calculateur et photo : on garde leurs vraies couleurs */
+  .phone,.calc-dark,.c2-main,.hero-shot,.avatar,img{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero-shot{width:auto!important;max-height:120mm}
+  .phone{break-inside:avoid}
+  /* Les quatre écrans de la page Produit : deux par ligne au lieu d'une rangée qui déborde */
+  .how{grid-auto-flow:row!important;grid-template-columns:1fr 1fr!important;overflow:visible!important;margin-top:16px!important}
+  .how li{break-inside:avoid;page-break-inside:avoid}
+  .how .phone{zoom:.8}
+  /* Questions fréquentes : réponses visibles */
+  details::details-content{content-visibility:visible;display:block}
+  /* Pied de page réduit à une ligne, avec l'adresse du site */
+  .site-f{padding:10px 0 0!important;border-top:1px solid #D0D5DD}
+  .f-bottom{margin:0!important;padding:0!important;border:0!important}
+  .f-bottom::after{content:" · kroko-labs.fr · contact@kroko-labs.fr";white-space:nowrap}
+}
 </style>
 </head>
 <body>
