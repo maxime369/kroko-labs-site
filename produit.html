@@ -157,6 +157,9 @@ html:has(.toc){scroll-padding-top:160px}
   .hero.split .hero-phone{margin:0}
   .hero.split .hero-shot{width:auto;height:min(600px,calc(100vh - 170px));max-width:100%}
 }
+.hero.split .trade{margin:0 0 14px}
+@media (min-width:960px){.hero.split .hero-phone .phone{zoom:.9}}
+@media (min-width:960px){#comment .how .phone{zoom:.8}}
 .steps3 .ch-n{font-family:var(--font-display);font-weight:600;font-size:3.2rem;line-height:.9;color:var(--accent)}
 .kpis{display:grid;gap:16px;margin-top:40px}
 @media (min-width:760px){.kpis{grid-template-columns:repeat(3,1fr)}}
@@ -999,16 +1002,6 @@ div.a-row{cursor:default}
     <div class="hero-cta"><a class="btn" href="demo.html">Voir la démo</a></div>
   </div>
 </section>
-<section class="sec tight" id="chapitres">
-  <div class="wrap">
-    <nav class="parts" aria-label="Les trois parties de la page">
-      <a class="part" href="#comment"><span class="ch-n">1</span><strong>Les 4 étapes</strong><span>De la visite à la proposition envoyée, qui fait quoi, compte rendu et relance.</span></a>
-      <a class="part" href="#calcul"><span class="ch-n">2</span><strong>Le temps gagné</strong><span>Le temps que votre équipe récupère, calculé avec vos chiffres.</span></a>
-      <a class="part" href="#compatibilite"><span class="ch-n">3</span><strong>Questions pratiques</strong><span>Votre logiciel et votre CRM, le comparatif, les questions fréquentes.</span></a>
-    </nav>
-  </div>
-</section>
-
 <section class="sec" id="comment">
   <div class="wrap">
     <h2>Les 4 étapes, <span class="l2">de la visite à l’envoi</span></h2>
@@ -1045,53 +1038,23 @@ div.a-row{cursor:default}
   </div>
 </section>
 
-<section class="sec" id="qui">
-  <div class="wrap">
-    <h2>Qui fait quoi : <span class="l2">l’app, le moteur de règles, le commercial</span></h2>
-    <div class="who">
-      <div>
-        <h3>L’app</h3>
-        <ul>
-          <li>Comprend les mots du terrain et retrouve la bonne référence de votre catalogue.</li>
-          <li>Pose les questions qui manquent.</li>
-          <li>Met en page la proposition à vos couleurs.</li>
-          <li>Range le compte rendu et propose la relance.</li>
-        </ul>
-      </div>
-      <div class="rule">
-        <h3>Le moteur de règles</h3>
-        <p><strong>L’IA ne fixe jamais un prix.</strong> Les prix, remises et conditions de chaque client sont calculés par un moteur de règles, à partir de vos tarifs. Même entrée, même prix, à chaque fois.</p>
-      </div>
-      <div>
-        <h3>Votre commercial</h3>
-        <ul>
-          <li>Vend, devant ses clients.</li>
-          <li>Raconte sa visite, à l’arrêt.</li>
-          <li>Répond aux questions de l’app.</li>
-          <li>Relit, valide et envoie.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="sec" id="en-plus">
+<section class="sec tight" id="en-plus">
   <div class="wrap">
     <h2>Compte rendu, relance et fiche client <span class="l2">faits aussi</span></h2>
-    <div class="cards c2">
-      <div class="card"><h3>Le compte rendu</h3><p>Rangé dans la fiche client à chaque rendez-vous, à partir de ce que le commercial a dicté.</p></div>
-      <div class="card"><h3>La relance</h3><p>Proposée au bon moment. Le commercial la valide avant qu’elle parte.</p></div>
-      <div class="card"><h3>La fiche client</h3><p>Pas de CRM ? L’app a sa propre fiche client : comptes rendus, propositions et relances y sont rangés.</p></div>
-      <div class="card"><h3>Le coach (offre Équipe)</h3><p>Une aide personnelle, pas une notation. Il prépare le rendez-vous à partir de l’historique du client et montre les points à travailler après coup.</p></div>
-    </div>
+    <div class="rows-wrap"><ul class="rows">
+      <li><strong>Le compte rendu</strong><span>Rangé dans la fiche client à chaque rendez-vous, à partir de ce que le commercial a dicté.</span></li>
+      <li><strong>La relance</strong><span>Proposée au bon moment. Le commercial la valide avant qu’elle parte.</span></li>
+      <li><strong>La fiche client</strong><span>Pas de CRM ? L’app a sa propre fiche client : comptes rendus, propositions et relances y sont rangés.</span></li>
+      <li><strong>Le coach (offre Équipe)</strong><span>Une aide personnelle, pas une notation. Il prépare le rendez-vous à partir de l’historique du client.</span></li>
+    </ul></div>
     <p class="plus"><strong>À votre image :</strong> l’app prend les couleurs et le logo de votre entreprise, et vos propositions commerciales suivent votre charte, avec plusieurs modèles au choix.</p>
-    <p class="plus"><strong>Pensée pour le terrain :</strong> deux ou trois boutons par écran, les mots du commercial, et une barre simple (Accueil, Mes clients, Créer, Coach, Mon compte).</p>
   </div>
 </section>
 
 
 
-<section class="sec" id="compatibilite">
+<section class="sec tight" id="compatibilite">
   <div class="wrap">
     <h2>Compatible avec <span class="l2">votre logiciel et votre CRM</span></h2>
     <div class="compat-grid">
@@ -1116,7 +1079,7 @@ div.a-row{cursor:default}
   </div>
 </section>
 
-<section class="sec" id="comparatif">
+<section class="sec tight" id="comparatif">
   <div class="wrap">
     <h2>Kroko Labs <span class="l2">comparé à vos outils actuels</span></h2>
     <div class="tbl-wrap">
@@ -1140,21 +1103,13 @@ div.a-row{cursor:default}
   </div>
 </section>
 
-<section class="sec center tight" id="questions">
-  <div class="wrap">
-    <h2>Questions fréquentes</h2>
-    <div class="faq"><details><summary>Nos commerciaux ont-ils besoin d’un CRM ?</summary><p>Non. Sans CRM, l’app a sa propre fiche client : comptes rendus, propositions et relances y sont rangés. Si vous avez déjà un CRM, nous le relions à Kroko Labs avec un connecteur MCP : vos clients sont retrouvés dans l’app, et les comptes rendus et propositions sont rangés dans votre CRM. Nous regardons ensemble pendant la démo ce que votre CRM permet.</p></details><details><summary>Nos commerciaux vont-ils vraiment s’en servir ?</summary><p>L’app est pensée pour eux : deux ou trois boutons par écran, leurs mots, et plus de saisie le soir. Ils racontent, ils répondent, ils relisent, ils envoient.</p></details><details><summary>Et si le commercial est en voiture ?</summary><p>Il dicte à l’arrêt, jamais en conduisant. Au volant, le téléphone tenu en main et les écouteurs sont interdits (article R412-6-1 du Code de la route).</p></details></div>
-    <div class="more-row"><a class="lnk" href="questions.html">Toutes les questions</a></div>
-  </div>
-</section>
-
 <section class="sec tight">
   <div class="wrap">
     <div class="cta-band">
       <h2>Voyez-la avec <span class='l2'>vos produits et vos prix</span></h2>
       <p class="sec-lead">30 minutes, en visio.</p>
       
-      <div class="hero-cta"><a class="btn" href="demo.html">Voir la démo</a><a class="lnk" href="confiance.html">Nos règles</a></div>
+      <div class="hero-cta"><a class="btn" href="demo.html">Voir la démo</a><a class="lnk" href="questions.html">Toutes les questions</a></div>
     </div>
   </div>
 </section>

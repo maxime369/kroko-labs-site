@@ -157,6 +157,9 @@ html:has(.toc){scroll-padding-top:160px}
   .hero.split .hero-phone{margin:0}
   .hero.split .hero-shot{width:auto;height:min(600px,calc(100vh - 170px));max-width:100%}
 }
+.hero.split .trade{margin:0 0 14px}
+@media (min-width:960px){.hero.split .hero-phone .phone{zoom:.9}}
+@media (min-width:960px){#comment .how .phone{zoom:.8}}
 .steps3 .ch-n{font-family:var(--font-display);font-weight:600;font-size:3.2rem;line-height:.9;color:var(--accent)}
 .kpis{display:grid;gap:16px;margin-top:40px}
 @media (min-width:760px){.kpis{grid-template-columns:repeat(3,1fr)}}
@@ -691,22 +694,22 @@ td.no{color:var(--soft)}
 </header>
 
 <main id="contenu">
-<section class="hero">
-  <div class="wrap">
-    <p class="trade">Négoce de matériaux</p>
-    <h1 class="vt"><span class="voice" aria-hidden="true"></span><span>Le devis chantier part</span> <span class="l2">le jour de la visite</span></h1>
-    <p class="lead">Vos commerciaux sortent du chantier et dictent deux minutes sur le parking. Le devis à vos couleurs, avec vos références et les prix nets de ce client, les attend avant le chantier suivant.</p>
-    <div class="hero-cta">
-      <a class="btn" href="demo.html">Voir la démo</a>
+<section class="hero split">
+  <div class="wrap hs">
+    <div class="hs-text">
+      <p class="trade">Négoce de matériaux</p>
+      <h1><span>Le devis chantier part</span> <span class="l2">le jour de la visite</span></h1>
+      <p class="lead">Vos commerciaux sortent du chantier et dictent deux minutes sur le parking. Le devis à vos couleurs, avec vos références et les prix nets de ce client, les attend avant le chantier suivant.</p>
+      <div class="hero-cta">
+        <a class="btn" href="demo.html?sector=negoce#essayer">Voir la démo</a>
+        <a class="btn btn-ghost" href="demo.html#rendez-vous">Réserver 30 min</a>
+      </div>
     </div>
-  </div>
-  <div class="wrap">
-    <div class="sig" aria-hidden="true"><i></i><svg class="k-ic" viewBox="113 113 567 567" aria-hidden="true" focusable="false"><circle cx="396.5" cy="396.5" r="283.5" fill="#7D31F5"/><path fill="#fff" d="M390.93 387.21L372.66 412.86L372.66 473L328.44 473L328.44 267.23L372.66 267.23L372.66 353.31L375.02 353.31L397.42 319.11L433.68 267.23L483.21 267.23L421.59 354.2L486.16 473L436.33 473L390.93 387.21Z"/><rect fill="#fff" x="317" y="515" width="159" height="34"/></svg><i></i></div>
     <div class="hero-phone"><div class="phone" aria-hidden="true"><div class="screen"><div class="status"><span class="mono">9:43</span><span class="bat"></span></div><div class="app-body" data-screen="prop" data-sector="negoce"></div><div class="tabbar" data-tabbar="create"></div></div></div></div>
   </div>
 </section>
 
-<section class="sec" id="constat">
+<section class="sec tight" id="constat">
   <div class="wrap">
     <h2>Ce qui ralentit <span class="l2">vos commerciaux aujourd’hui</span></h2>
     <div class="rows-wrap"><ul class="rows"><li><strong>Le chantier n’attend pas.</strong><span>Le conducteur de travaux veut son prix vite. S’il attend, il appelle un autre négoce.</span></li><li><strong>Des milliers de références, des noms de chantier.</strong><span>« Du 13 hydro », « des rails de 48 » : il faut retrouver la bonne référence, dans la bonne longueur.</span></li><li><strong>Chaque client a ses conditions.</strong><span>Remises et prix négociés changent d’un compte à l’autre. Les recopier à la main, c’est risquer l’erreur.</span></li></ul></div>
@@ -766,35 +769,10 @@ td.no{color:var(--soft)}
   </div>
 </section>
 
-<section class="sec tight" id="compatibilite">
-  <div class="wrap">
-    <h2>Compatible avec <span class="l2">votre logiciel et votre CRM</span></h2>
-    <div class="compat-grid">
-      <div class="compat-card">
-        <div class="files" aria-hidden="true">
-          <div class="file"><span class="mono">.csv</span></div>
-          <div class="file"><span class="mono">.xlsx</span></div>
-        </div>
-        <h3>Votre catalogue et vos tarifs</h3>
-        <p>Un export Excel ou CSV de votre logiciel de gestion suffit. Nous chargeons votre catalogue, vos tarifs et les conditions de vos clients à la mise en place. La mise à jour du catalogue et des prix est incluse dans l’abonnement.</p>
-      </div>
-      <div class="compat-card">
-        <div class="mcp" aria-hidden="true">
-          <span class="node">Votre CRM</span>
-          <span class="link"><i></i><b>Connecteur MCP</b><i></i></span>
-          <span class="node nl">Kroko Labs</span>
-        </div>
-        <h3>Votre CRM, relié à Kroko Labs</h3>
-        <p>Nous relions votre CRM à Kroko Labs avec un connecteur MCP, un standard ouvert qui permet à deux logiciels d’échanger leurs informations. Vos clients sont retrouvés dans l’app, et les comptes rendus et propositions sont rangés dans votre CRM, sans double saisie. Pendant la démo, nous regardons ensemble ce que votre CRM permet.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="sec center tight" id="questions">
   <div class="wrap">
     <h2>Questions fréquentes</h2>
-    <div class="faq"><details><summary>L’app comprend-elle les mots de nos commerciaux ?</summary><p>C’est ce que nous réglons à la mise en place, avec votre catalogue : les abréviations et les noms d’usage de votre métier sont reliés à vos références. Si une référence reste ambiguë, l’app pose la question.</p></details><details><summary>Qu’avons-nous à préparer ?</summary><p>Un export de votre catalogue et de vos tarifs. Le reste est fait par nous à la mise en place : catalogue, tarifs, conditions clients, charte et modèles de proposition.</p></details><details><summary>Comment se passe le pilote ?</summary><p>90 jours, sur une partie de votre équipe, avec votre catalogue. On le juge sur les propositions réellement envoyées et le temps gagné.</p></details></div>
+    <div class="faq"><details><summary>L’app comprend-elle les mots de nos commerciaux ?</summary><p>C’est ce que nous réglons à la mise en place, avec votre catalogue : les abréviations et les noms d’usage de votre métier sont reliés à vos références. Si une référence reste ambiguë, l’app pose la question.</p></details><details><summary>Ça marche avec notre logiciel ?</summary><p>Oui. Un export Excel ou CSV de votre logiciel de gestion suffit. Nous chargeons votre catalogue, vos tarifs et les conditions de vos clients à la mise en place, et la mise à jour du catalogue et des prix est incluse dans l’abonnement. Si vous avez un CRM, nous le relions à Kroko Labs avec un connecteur MCP.</p></details><details><summary>Comment se passe le pilote ?</summary><p>90 jours, sur une partie de votre équipe, avec votre catalogue. On le juge sur les propositions réellement envoyées et le temps gagné.</p></details></div>
     <div class="more-row"><a class="lnk" href="questions.html">Toutes les questions</a></div>
   </div>
 </section>
