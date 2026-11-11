@@ -30,6 +30,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kroko-labs.fr/"},{"@type":"ListItem","position":2,"name":"Négoce de matériaux","item":"https://kroko-labs.fr/negoce-materiaux"}]}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Le commercial dit « BA13 », « rail de 48 » ou « laine de 100 ». L’app retrouve la bonne référence ?","acceptedAnswer":{"@type":"Answer","text":"Oui, à partir de votre catalogue. À la mise en place, nous relions les mots du chantier à vos références, longueurs et épaisseurs comprises. Si deux références peuvent convenir, l’app pose la question plutôt que de choisir."}},{"@type":"Question","name":"Les prix nets et les conditions de chaque compte artisan sont respectés ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L’IA retrouve les références et les quantités ; les prix nets, les remises et les conditions de chaque compte sont calculés par un moteur de règles, à partir des règles écrites avec vous à la mise en place."}},{"@type":"Question","name":"Le devis gère les conditionnements : palette, botte, mètre linéaire ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Les unités de vente et les conditionnements viennent de votre catalogue : l’app reprend l’unité de chaque référence. En cas de doute, par exemple des plaques à l’unité ou à la palette, elle pose la question au commercial."}},{"@type":"Question","name":"On peut ajouter la livraison chantier ou le retrait au comptoir ?","acceptedAnswer":{"@type":"Answer","text":"Oui. La livraison chantier, avec ou sans camion grue, et le retrait au comptoir sont des lignes de votre tarif. Le commercial les dicte, le moteur de règles applique le prix ou le franco prévu pour ce client."}},{"@type":"Question","name":"Le devis indique la disponibilité au dépôt ?","acceptedAnswer":{"@type":"Answer","text":"Non. L’app ne lit pas le stock : la disponibilité reste vérifiée par le comptoir ou dans votre logiciel de gestion."}},{"@type":"Question","name":"Le comptoir peut reprendre le devis du commercial ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Le devis accepté est transmis au comptoir ou à l’ADV, qui passe la commande dans votre logiciel de gestion. L’app ne crée pas la commande elle-même."}},{"@type":"Question","name":"Comment les prix restent-ils à jour ?","acceptedAnswer":{"@type":"Answer","text":"La mise à jour du catalogue et des prix est incluse dans l’abonnement. Un nouvel export Excel ou CSV de votre logiciel de gestion suffit."}}]}
+</script>
 
 
 <style>@font-face{font-family:'Jost';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/jost-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
@@ -728,7 +731,7 @@ td.no{color:var(--soft)}
     <div class="hs-text">
       <p class="trade">Négoce de matériaux</p>
       <h1><span>Le devis chantier part</span> <span class="l2">le jour de la visite</span></h1>
-      <p class="lead">Vos commerciaux sortent du chantier et dictent deux minutes sur le parking. Le devis à vos couleurs, avec vos références et les prix nets de ce client, les attend avant le chantier suivant.</p>
+      <p class="lead">Vos commerciaux sortent du chantier et dictent deux minutes sur le parking. Le devis à vos couleurs, avec vos références et les prix nets de ce client, les attend avant le chantier suivant. C’est l’application des commerciaux terrain en négoce de matériaux : attachés commerciaux et technico-commerciaux qui visitent artisans et chantiers.</p>
       <div class="hero-cta">
         <a class="btn" href="/demo?sector=negoce#essayer">Voir la démo</a>
         <a class="btn btn-ghost" href="/demo#rendez-vous">Réserver 30 min</a>
@@ -741,10 +744,17 @@ td.no{color:var(--soft)}
 <section class="sec tight" id="constat">
   <div class="wrap">
     <h2>Ce qui ralentit <span class="l2">vos commerciaux aujourd’hui</span></h2>
-    <div class="rows-wrap"><ul class="rows"><li><strong>Le chantier n’attend pas.</strong><span>Le conducteur de travaux veut son prix vite. S’il attend, il appelle un autre négoce.</span></li><li><strong>Des milliers de références, des noms de chantier.</strong><span>« Du 13 hydro », « des rails de 48 » : il faut retrouver la bonne référence, dans la bonne longueur.</span></li><li><strong>Chaque client a ses conditions.</strong><span>Remises et prix négociés changent d’un compte à l’autre. Les recopier à la main, c’est risquer l’erreur.</span></li></ul></div>
+    <div class="rows-wrap"><ul class="rows"><li><strong>Le chantier n’attend pas.</strong><span>Le conducteur de travaux veut son prix vite. S’il attend, il appelle un autre négoce.</span></li><li><strong>Des milliers de références, des noms de chantier.</strong><span>« Du 13 hydro », « des rails de 48 » : il faut retrouver la bonne référence, dans la bonne longueur.</span></li><li><strong>Chaque client a ses conditions.</strong><span>Remises et prix négociés changent d’un compte à l’autre. Les recopier à la main, c’est risquer l’erreur.</span></li><li><strong>Le devis attend le soir.</strong><span>Il est noté dans la voiture, chiffré après la dernière visite, parfois le lendemain. L’artisan, lui, a déjà demandé ailleurs.</span></li><li><strong>La relance ne part pas.</strong><span>L’artisan compare plusieurs négoces. Sans relance au bon moment, le devis reste sans réponse.</span></li></ul></div>
   </div>
 </section>
-
+<section class="sec" id="journee">
+  <div class="wrap">
+    <h2>Une journée de tournée, <span class="l2">de la première visite à la dernière relance</span></h2>
+    <p class="sec-lead">Une tournée ordinaire d’attaché commercial en négoce. Les clients et les chiffres sont fictifs ; le déroulé est celui que l’app propose.</p>
+    <div class="rows-wrap"><ul class="rows num"><li><span class="mono">8 h</span><div><strong>Chantier, résidence en cours</strong><p>Le conducteur de travaux a besoin de plaques hydro, de rails et de montants pour la semaine prochaine. Le commercial dicte en sortant : les quantités, les longueurs, la date. L’app retrouve les références et les unités de vente du catalogue, le moteur de règles applique les prix nets de ce compte. Le devis part avant le chantier suivant.</p></div></li><li><span class="mono">11 h 30</span><div><strong>Artisan au dépôt</strong><p>Un plaquiste passe prendre de l’isolant et veut le retirer au comptoir dans l’après-midi. Le commercial dicte « retrait comptoir à 16 h » : la ligne du tarif est ajoutée, le devis précise le mode et l’heure.</p></div></li><li><span class="mono">15 h</span><div><strong>Deuxième chantier</strong><p>Deux palettes de BA13 à livrer sur chantier, avec camion grue. La livraison est une ligne de votre tarif : le commercial la dicte, le moteur de règles applique le prix ou le franco prévu pour ce client.</p></div></li><li><span class="mono">18 h</span><div><strong>Fin de tournée</strong><p>Les devis acceptés sont transmis au comptoir ou à l’ADV, qui passe la commande dans votre logiciel de gestion. Les comptes rendus sont dans les fiches clients et les relances de la semaine sont programmées. Rien à ressaisir le soir.</p></div></li></ul></div>
+    <blockquote class="anecdote"><p>« Mon métier, c’était le vin, pas le négoce de matériaux. Le soir, il me restait environ sept comptes rendus de visite et une ou deux propositions commerciales à rédiger, au moins deux heures d’administratif par jour. C’est ce temps-là que Kroko Labs veut rendre aux commerciaux terrain, quel que soit leur métier. »</p><cite>Maxime Fauquembergue, cofondateur, ancien commercial terrain dans le vin</cite></blockquote>
+  </div>
+</section>
 <section class="sec" id="mots">
   <div class="wrap">
     <h2>Les mots du terrain <span class="l2">deviennent vos références</span></h2>
@@ -767,6 +777,18 @@ td.no{color:var(--soft)}
         <svg class="arrow" viewBox="0 0 18 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1v24M2 18l7 8 7-8"/></svg>
         <div class="found"><small>L’app retrouve</small><span class="mono">MON-48-30</span><br>Montant M48, 3 m</div>
         
+      </article><article class="sector">
+        
+        <p class="said"><small>Le commercial dit</small>« de la laine de 100 »</p>
+        <svg class="arrow" viewBox="0 0 18 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1v24M2 18l7 8 7-8"/></svg>
+        <div class="found"><small>L’app retrouve</small><span class="mono">ISO-LV-100</span><br>Laine de verre 100 mm, rouleau (unité du catalogue)</div>
+        
+      </article><article class="sector">
+        
+        <p class="said"><small>Le commercial dit</small>« deux palettes de BA13 »</p>
+        <svg class="arrow" viewBox="0 0 18 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1v24M2 18l7 8 7-8"/></svg>
+        <div class="found"><small>L’app retrouve</small><span class="mono">PLA-BA13-25</span><br>Plaque BA13, conditionnement palette du catalogue</div>
+        
       </article></div>
     <div class="rules-strip">
       <div><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><strong>L’IA ne fixe jamais un prix.</strong> Un moteur de règles calcule à partir de vos tarifs.</span></div>
@@ -774,8 +796,26 @@ td.no{color:var(--soft)}
     </div>
   </div>
 </section>
-
-
+<section class="sec" id="exemple">
+  <div class="wrap">
+    <h2>Exemple de devis chantier <span class="l2">pour un artisan, données fictives</span></h2>
+    <p class="sec-lead">Ce que reçoit le conducteur de travaux, avec des données fictives. Les prix catalogue sont ceux du négoce fictif, la remise est celle de ce compte : le moteur de règles l’applique, l’IA ne décide de rien.</p>
+    <div class="ex-dictee"><strong>Ce que le commercial a dicté</strong>« Chantier de la résidence des Tilleuls. Il lui faut 120 plaques de 13 hydro, 80 rails et 60 montants en 3 mètres. Livraison au dépôt mardi. »</div>
+    <div class="ex-head" style="background:#2F5FB8"><b>Négoce Martin → Bâtiments Morel</b><span>Proposition n° 2026-114, fictive : Chantier résidence des Tilleuls, livraison au dépôt mardi. Remise appliquée : remise client, 12 %.</span></div>
+    <div class="tbl-wrap"><table><caption class="sr">Exemple de proposition chiffrée, données fictives</caption><thead><tr><th scope="col">Référence</th><th scope="col" class="num">Prix catalogue</th><th scope="col" class="num">Remise</th><th scope="col" class="num">Net unitaire</th><th scope="col" class="num">Quantité</th><th scope="col" class="num">Total HT</th></tr></thead><tbody><tr><th scope="row">Plaque de plâtre hydro BA13, 1,20 × 2,50 m<br><span class="mono">PLA-H13-25</span></th><td class="num">9,75 €</td><td class="num">12 %</td><td class="num">8,58 €</td><td class="num">120</td><td class="num">1 029,60 €</td></tr><tr><th scope="row">Rail R48, 3 m<br><span class="mono">RAI-48-30</span></th><td class="num">3,50 €</td><td class="num">12 %</td><td class="num">3,08 €</td><td class="num">80</td><td class="num">246,40 €</td></tr><tr><th scope="row">Montant M48, 3 m<br><span class="mono">MON-48-30</span></th><td class="num">4,25 €</td><td class="num">12 %</td><td class="num">3,74 €</td><td class="num">60</td><td class="num">224,40 €</td></tr></tbody><tfoot><tr><th scope="row" colspan="5">Total HT</th><td class="num">1 500,40 €</td></tr></tfoot></table></div>
+    <p class="tbl-note">Dicté en 38 secondes sur le parking du chantier, relu et envoyé par le commercial depuis sa messagerie. Le compte rendu et la relance de jeudi sont préparés en même temps. Calcul : net unitaire = prix catalogue × (100 − remise) / 100 ; total = quantité × net unitaire.</p>
+  </div>
+</section>
+<section class="sec" id="perimetre">
+  <div class="wrap">
+    <h2>Ce que l’app fait, <span class="l2">et ce qu’elle ne fait pas</span></h2>
+    <div class="cards c2">
+      <div class="card"><h3>Ce qu’elle fait</h3><ul><li>Prend la dictée après la visite : matériaux, quantités, longueurs, date, mode de livraison.</li><li>Retrouve les références et les unités de vente dans votre catalogue, à partir des mots du chantier.</li><li>Applique les prix nets et les conditions de chaque compte artisan ou entreprise.</li><li>Ajoute la livraison chantier ou le retrait au comptoir, en lignes de votre tarif.</li><li>Rédige le compte rendu de visite et programme la relance du devis.</li></ul></div>
+      <div class="card"><h3>Ce qu’elle ne fait pas</h3><ul><li>Ne fixe aucun prix : le moteur de règles applique vos tarifs et vos conditions.</li><li>N’envoie rien seule : le commercial relit et valide avant l’envoi.</li><li>Ne lit pas le stock : la disponibilité au dépôt reste vérifiée par le comptoir ou votre logiciel de gestion.</li><li>Ne crée pas la commande : le devis accepté est repris par le comptoir ou l’ADV dans votre logiciel de gestion.</li><li>Ne remplace pas votre logiciel de gestion et ne fait pas de boutique en ligne.</li></ul></div>
+    </div>
+    <div class="more-row"><a class="lnk" href="/comment-ca-marche">Voir les quatre écrans</a><a class="lnk" href="/confiance">Nos engagements sur les prix et l’enregistrement</a></div>
+  </div>
+</section>
 <section class="sec" id="calcul" data-default="negoce">
   <div class="wrap">
     <h2>Calculez <span class="l2">le temps gagné par votre équipe</span></h2>
@@ -797,12 +837,25 @@ td.no{color:var(--soft)}
     <p class="disclaimer">Estimation indicative, pas une promesse de résultat. Elle part d’une visite sur cinq qui donne lieu à une proposition, de 5 minutes par proposition avec Kroko Labs (dictée et relecture) et d’une heure par rendez-vous, trajet compris. Le temps gagné sur les comptes rendus et les relances vient en plus.</p>
   </div>
 </section>
-
+<section class="sec tight" id="objections">
+  <div class="wrap">
+    <h2>Les objections <span class="l2">qu’on entend le plus</span></h2>
+    <div class="rows-wrap"><ul class="rows"><li><strong>« L’artisan veut son prix tout de suite. »</strong><span>C’est le but. Le commercial dicte en sortant du chantier, relit le devis sur son téléphone et l’envoie dans la foulée, avant d’arriver au rendez-vous suivant.</span></li><li><strong>« Nos prix nets changent souvent. »</strong><span>La mise à jour du catalogue et des prix est incluse dans l’abonnement : un nouvel export Excel ou CSV de votre logiciel de gestion suffit. Le moteur de règles calcule toujours sur vos derniers tarifs.</span></li><li><strong>« Nos commerciaux préfèrent le téléphone. »</strong><span>Ils gardent leur téléphone : ils racontent la visite comme à un collègue, en une à trois minutes. L’app en fait le devis, le compte rendu et la relance, sans saisie.</span></li><li><strong>« On a déjà un logiciel de gestion et un CRM. »</strong><span>L’app ne les remplace pas. Un export suffit pour le catalogue et les tarifs, et si vous avez un CRM, nous le relions à Kroko Labs : les comptes rendus et les devis y sont rangés.</span></li></ul></div>
+    
+  </div>
+</section>
+<section class="sec tight" id="relance">
+  <div class="wrap">
+    <h2>La relance du devis <span class="l2">est prête dès la visite</span></h2>
+    <p class="sec-lead">Au moment où le devis part, l’app propose la relance : la date, le message, le rappel au commercial. Il la relit et l’envoie au bon moment, avant que l’artisan ait choisi un autre négoce. Les devis sans réponse ne se perdent plus dans la boîte d’envoi.</p>
+  </div>
+</section>
 <section class="sec center tight" id="questions">
   <div class="wrap">
-    <h2>Questions fréquentes</h2>
-    <div class="faq"><details><summary>L’app comprend-elle les mots de nos commerciaux ?</summary><p>C’est ce que nous réglons à la mise en place, avec votre catalogue : les abréviations et les noms d’usage de votre métier sont reliés à vos références. Si une référence reste ambiguë, l’app pose la question.</p></details><details><summary>Ça marche avec notre logiciel ?</summary><p>Oui. Un export Excel ou CSV de votre logiciel de gestion suffit. Nous chargeons votre catalogue, vos tarifs et les conditions de vos clients à la mise en place, et la mise à jour du catalogue et des prix est incluse dans l’abonnement. Si vous avez un CRM, nous le relions à Kroko Labs avec un connecteur MCP.</p></details><details><summary>Comment se passe le pilote ?</summary><p>90 jours, sur une partie de votre équipe, avec votre catalogue. On le juge sur les propositions réellement envoyées et le temps gagné.</p></details></div>
-    <div class="more-row"><a class="lnk" href="/questions">Toutes les questions</a></div>
+    <h2>Questions fréquentes <span class="l2">en négoce de matériaux</span></h2>
+    <div class="faq"><details><summary>Le commercial dit « BA13 », « rail de 48 » ou « laine de 100 ». L’app retrouve la bonne référence ?</summary><p>Oui, à partir de votre catalogue. À la mise en place, nous relions les mots du chantier à vos références, longueurs et épaisseurs comprises. Si deux références peuvent convenir, l’app pose la question plutôt que de choisir.</p></details><details><summary>Les prix nets et les conditions de chaque compte artisan sont respectés ?</summary><p>Oui. L’IA retrouve les références et les quantités ; les prix nets, les remises et les conditions de chaque compte sont calculés par un moteur de règles, à partir des règles écrites avec vous à la mise en place.</p></details><details><summary>Ça marche avec notre logiciel de gestion ?</summary><p>Oui. Un export Excel ou CSV de votre logiciel de gestion suffit. Nous chargeons votre catalogue, vos tarifs et les conditions de vos clients à la mise en place, et la mise à jour du catalogue et des prix est incluse dans l’abonnement. Si vous avez un CRM, nous le relions à Kroko Labs avec un connecteur MCP.</p></details><details><summary>Le devis gère les conditionnements : palette, botte, mètre linéaire ?</summary><p>Oui. Les unités de vente et les conditionnements viennent de votre catalogue : l’app reprend l’unité de chaque référence. En cas de doute, par exemple des plaques à l’unité ou à la palette, elle pose la question au commercial.</p></details><details><summary>On peut ajouter la livraison chantier ou le retrait au comptoir ?</summary><p>Oui. La livraison chantier, avec ou sans camion grue, et le retrait au comptoir sont des lignes de votre tarif. Le commercial les dicte, le moteur de règles applique le prix ou le franco prévu pour ce client.</p></details><details><summary>Le devis indique la disponibilité au dépôt ?</summary><p>Non. L’app ne lit pas le stock : la disponibilité reste vérifiée par le comptoir ou dans votre logiciel de gestion.</p></details><details><summary>Le comptoir peut reprendre le devis du commercial ?</summary><p>Oui. Le devis accepté est transmis au comptoir ou à l’ADV, qui passe la commande dans votre logiciel de gestion. L’app ne crée pas la commande elle-même.</p></details><details><summary>Comment les prix restent-ils à jour ?</summary><p>La mise à jour du catalogue et des prix est incluse dans l’abonnement. Un nouvel export Excel ou CSV de votre logiciel de gestion suffit.</p></details></div>
+    <div class="more-row"><a class="lnk" href="/questions">Toutes les questions</a><a class="lnk" href="/vins-spiritueux">Vins et spiritueux</a><a class="lnk" href="/distribution-industrielle">Distribution industrielle</a><a class="lnk" href="/autres-secteurs">Autres secteurs</a></div>
+    <p class="author">Page écrite par l’équipe Kroko Labs. <a href="/a-propos">À propos des fondateurs</a>.</p>
   </div>
 </section>
 
