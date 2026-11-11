@@ -1,0 +1,49 @@
+# Kroko Labs
+
+> Kroko Labs est une application web pour les commerciaux terrain des PME B2B en France. Après chaque visite, le commercial dicte ce qui s’est dit ; l’app prépare la proposition chiffrée à vos couleurs, avec vos références et vos prix, ainsi que le compte rendu et la relance. Un moteur de règles calcule les prix, l’IA n’en fixe aucun, et le commercial relit et valide avant tout envoi.
+
+Pour les dirigeants et directeurs commerciaux de PME de 20 à 249 salariés qui ont des commerciaux terrain, un catalogue et des clients professionnels : vins et spiritueux, distribution industrielle, négoce de matériaux, et d’autres métiers de vente sur catalogue.
+
+Ce que fait l’app :
+- Le commercial dicte sa visite en une à trois minutes, à l’arrêt, en sortant du rendez-vous.
+- L’app retrouve les références et les quantités dans le catalogue de l’entreprise, et pose une question si un détail manque.
+- Un moteur de règles calcule prix, remises et conditions de chaque client, à partir des tarifs de l’entreprise.
+- La proposition sort aux couleurs de l’entreprise ; le compte rendu et la relance sont préparés.
+- Le brouillon s’ouvre dans la messagerie du commercial, qui relit et envoie lui-même.
+- Un export Excel ou CSV du logiciel de gestion suffit ; un CRM peut être relié par un connecteur MCP (un standard ouvert qui permet à deux logiciels d’échanger leurs informations).
+- C’est une application web : elle s’ouvre dans le navigateur du téléphone et s’ajoute à l’écran d’accueil, sans magasin d’applications.
+
+Ce que l’app ne fait pas :
+- L’IA ne fixe jamais un prix.
+- Rien n’est envoyé sans la validation du commercial.
+- Pas d’enregistrement d’un rendez-vous sans l’accord du client (article 226-1 du Code pénal) ; l’accord est tracé, et sans accord on revient à la dictée.
+- Pas d’analyse des émotions dans la voix.
+- On dicte à l’arrêt, jamais en conduisant (article R412-6-1 du Code de la route).
+- Elle ne remplace ni le logiciel de gestion ni le CRM.
+
+Prix : Le prix dépend de la taille de votre équipe et de votre catalogue ; nous vous le donnons pendant la démo.
+Pilote : 90 jours, sur une partie de votre équipe, avec votre catalogue. On le juge sur les propositions réellement envoyées et le temps gagné.
+Mise en place : Cela dépend de votre catalogue et de vos conditions clients ; nous vous donnons le délai pendant la démo. La mise en place est faite par nous : catalogue, tarifs, conditions clients, charte et modèles de proposition.
+
+Données : Vous restez responsable de vos données : Kroko Labs agit comme sous-traitant au sens du RGPD et signe avec vous un accord de traitement des données. Elles servent uniquement à faire fonctionner l’app pour votre équipe, jamais revendues. Le lieu d’hébergement et la durée de conservation sont écrits dans ce contrat, avant le début du pilote.
+
+Fondateurs : Maxime Fauquembergue, cofondateur, ancien commercial terrain dans le vin et le champagne ; Rémi Talbot, cofondateur, fondateur et président de Made in AI, société de conseil en intelligence artificielle qui accompagne les entreprises et crée des automatisations sur mesure, des logiciels de gestion, des CRM et des agents connectés. Kroko Labs est une société distincte.
+Contact : contact@kroko-labs.fr
+
+## Pages principales
+
+- [Comment ça marche](https://kroko-labs.fr/comment-ca-marche) : les étapes, de la dictée à l’envoi, et le calculateur de temps gagné
+- [Questions fréquentes](https://kroko-labs.fr/questions) : ce qu’est Kroko Labs, logiciel, CRM, prix, pilote, enregistrement, données
+- [Confiance](https://kroko-labs.fr/confiance) : prix, enregistrement avec accord, RGPD, accord de confidentialité
+- [Démo](https://kroko-labs.fr/demo) : essayer l’app avec des données fictives, ou réserver 30 minutes en visio
+
+## Secteurs
+
+- [Vins et spiritueux](https://kroko-labs.fr/vins-spiritueux) : cuvées, formats, conditions CHR et caviste
+- [Distribution industrielle](https://kroko-labs.fr/distribution-industrielle) : technico-commerciaux itinérants, prix nets et remises par famille
+- [Négoce de matériaux](https://kroko-labs.fr/negoce-materiaux) : devis chantier le jour de la visite
+- [Autres secteurs](https://kroko-labs.fr/autres-secteurs) : vente sur catalogue à des professionnels
+
+## Optionnel
+
+- [À propos](https://kroko-labs.fr/a-propos) : les fondateurs et les principes
