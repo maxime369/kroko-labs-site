@@ -481,6 +481,24 @@ button.app-btn{cursor:pointer;width:100%}
 .res .k{margin-top:10px;color:var(--muted)}
 .res.dim .v{font-size:1.1rem;letter-spacing:0;font-weight:500;color:var(--muted);line-height:1.45;font-family:inherit}
 .disclaimer{font-size:.9rem;color:var(--muted)}
+/* Pages secteurs enrichies (phase 2 SEO) : journée type, listes fait / ne fait pas, tableau d'exemple, signature, emplacements de brouillon */
+.card ul{margin:0;padding-left:1.1em;color:var(--muted);display:grid;gap:8px}
+.card ul li::marker{color:var(--accent)}
+.rows.num > li .mono{font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--accent);padding-top:0}
+.rows.num > li > div p{margin-top:4px}
+.ex-head{display:grid;gap:4px;margin-top:40px;padding:22px 26px;border-radius:22px 22px 0 0;background:#7A2335;color:#fff}
+.ex-head b{font-family:var(--font-heading);font-size:1.15rem}
+.ex-head span{opacity:.85;font-size:.95rem}
+.ex-head + .tbl-wrap{margin-top:0;border-radius:0 0 22px 22px}
+.ex-dictee{margin-top:28px;padding:18px 22px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 16px 16px 0;color:var(--muted)}
+.ex-dictee strong{display:block;color:var(--text);margin-bottom:4px}
+table td.num,table th.num{text-align:right;white-space:nowrap}
+tfoot th,tfoot td{font-weight:600;border-top:2px solid var(--line-strong);border-bottom:0}
+.author{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+.anecdote{margin:28px 0 0;padding:20px 24px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 18px 18px 0;max-width:52em}
+.anecdote p{margin:0;font-size:1.05rem;color:var(--text)}
+.anecdote cite{display:block;margin-top:10px;font-style:normal;font-size:.9rem;color:var(--muted)}
+.brouillon{display:block;margin-top:16px;padding:14px 18px;border-radius:14px;background:#FFF3B0;color:#5A4300;font-style:italic}
 
 /* Vidéo */
 .video{margin-top:56px;display:grid;gap:18px}
@@ -787,6 +805,7 @@ td.no{color:var(--soft)}
     <div class="more-row"><a class="lnk" href="/questions">Toutes les questions</a></div>
   </div>
 </section>
+
 
 <section class="sec tight">
   <div class="wrap">
