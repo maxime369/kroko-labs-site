@@ -30,6 +30,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kroko-labs.fr/"},{"@type":"ListItem","position":2,"name":"Distribution industrielle","item":"https://kroko-labs.fr/distribution-industrielle"}]}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Nos désignations sont longues et techniques. L’app retrouve la bonne référence ?","acceptedAnswer":{"@type":"Answer","text":"Oui, à partir de votre catalogue. À la mise en place, nous relions les mots et les abréviations de vos commerciaux à vos références. Si deux références peuvent convenir, l’app pose la question plutôt que de choisir."}},{"@type":"Question","name":"Les prix nets et les remises par famille sont respectés ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L’IA retrouve les références et les quantités ; les prix nets, les remises par famille et les conditions de chaque compte sont calculés par un moteur de règles, à partir des règles écrites avec vous à la mise en place."}},{"@type":"Question","name":"Le commercial dit « comme la dernière fois ». L’app comprend ?","acceptedAnswer":{"@type":"Answer","text":"Oui, si l’historique d’achats du client nous est fourni à la mise en place ou s’il est lu dans votre CRM relié. Sinon, l’app pose la question."}},{"@type":"Question","name":"Notre catalogue compte des dizaines de milliers de références. Comment le récupérez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Un export Excel ou CSV de votre logiciel de gestion suffit. Nous le chargeons à la mise en place, avec vos tarifs et les conditions de vos clients, et la mise à jour du catalogue et des prix est incluse dans l’abonnement."}},{"@type":"Question","name":"Et un article hors catalogue, ou qu’il faut faire coter par le fournisseur ?","acceptedAnswer":{"@type":"Answer","text":"L’app le signale et crée une ligne « à chiffrer ». Le commercial ou le sédentaire la complète avant l’envoi ; la proposition ne part pas avec un prix manquant."}},{"@type":"Question","name":"Pas de réseau dans l’atelier, comment fait-on ?","acceptedAnswer":{"@type":"Answer","text":"Le commercial dicte quand même. La dictée est gardée sur le téléphone et traitée dès que le réseau revient."}},{"@type":"Question","name":"Notre sédentaire ou l’ADV peut relire avant l’envoi ?","acceptedAnswer":{"@type":"Answer","text":"Oui, c’est une option réglée à la mise en place. Le commercial valide toujours ; la relecture par le sédentaire ou l’ADV vient en plus."}}]}
+</script>
 
 
 <style>@font-face{font-family:'Jost';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/jost-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
@@ -728,7 +731,7 @@ td.no{color:var(--soft)}
     <div class="hs-text">
       <p class="trade">Distribution industrielle</p>
       <h1><span>La proposition technique</span> <span class="l2">part le jour de la visite</span></h1>
-      <p class="lead">En sortant de l’atelier, vos commerciaux dictent ce qu’il faut. Roulements, visserie, protection : l’app retrouve la bonne référence, le moteur de règles applique les conditions du client.</p>
+      <p class="lead">En sortant de l’atelier, vos commerciaux dictent ce qu’il faut. Roulements, visserie, protection : l’app retrouve la bonne référence, le moteur de règles applique les conditions du client. C’est l’application des technico-commerciaux itinérants en distribution industrielle : fournitures, maintenance, outillage, protection.</p>
       <div class="hero-cta">
         <a class="btn" href="/demo?sector=industrie#essayer">Voir la démo</a>
         <a class="btn btn-ghost" href="/demo#rendez-vous">Réserver 30 min</a>
@@ -741,10 +744,17 @@ td.no{color:var(--soft)}
 <section class="sec tight" id="constat">
   <div class="wrap">
     <h2>Ce qui ralentit <span class="l2">vos commerciaux aujourd’hui</span></h2>
-    <div class="rows-wrap"><ul class="rows"><li><strong>Des désignations à rallonge.</strong><span>Une désignation technique mal recopiée, et c’est la mauvaise pièce qui part.</span></li><li><strong>La maintenance veut une réponse rapide.</strong><span>Un atelier qui attend une pièce n’attend pas trois jours un devis.</span></li><li><strong>Chaque compte a ses conditions.</strong><span>Remises négociées, conditions par client : tout doit être juste, ligne par ligne.</span></li></ul></div>
+    <div class="rows-wrap"><ul class="rows"><li><strong>Des désignations à rallonge.</strong><span>Une désignation technique mal recopiée, et c’est la mauvaise pièce qui part.</span></li><li><strong>La maintenance veut une réponse rapide.</strong><span>Un atelier qui attend une pièce n’attend pas trois jours un devis.</span></li><li><strong>La demande de prix attend le retour au bureau.</strong><span>Elle est notée sur un coin de carnet, chiffrée le soir ou le lendemain. Pendant ce temps, le client a demandé ailleurs.</span></li><li><strong>Chaque compte a ses conditions.</strong><span>Prix nets, remises par famille, conditions négociées : tout doit être juste, ligne par ligne.</span></li><li><strong>Un article hors catalogue bloque tout le devis.</strong><span>Il manque un prix fournisseur sur une seule ligne, et la proposition entière attend.</span></li></ul></div>
   </div>
 </section>
-
+<section class="sec" id="journee">
+  <div class="wrap">
+    <h2>Une journée de tournée, <span class="l2">de la première visite à la dernière relance</span></h2>
+    <p class="sec-lead">Une tournée ordinaire de technico-commercial. Les clients et les chiffres sont fictifs ; le déroulé est celui que l’app propose.</p>
+    <div class="rows-wrap"><ul class="rows num"><li><span class="mono">7 h 45</span><div><strong>Usine, service maintenance</strong><p>Une ligne est arrêtée, il faut des roulements étanches et de la visserie inox. Le commercial dicte en sortant, deux minutes : les quantités, le délai, ce que le responsable maintenance a dit. L’app retrouve les références, le moteur de règles applique les prix nets de ce compte. La proposition part avant la visite suivante.</p></div></li><li><span class="mono">11 h</span><div><strong>Atelier en sous-sol, sans réseau</strong><p>Pas de réseau à l’intérieur. Le commercial dicte quand même : la dictée est gardée sur le téléphone et traitée dès que le réseau revient, sur le parking. Il n’a rien à refaire.</p></div></li><li><span class="mono">14 h 30</span><div><strong>Client régulier</strong><p>« Comme la dernière fois, avec deux boîtes de plus, et un joint spécial qui n’est pas au catalogue. » L’app reprend la dernière commande de ce client à partir de son historique d’achats, ajoute les deux boîtes et crée une ligne « à chiffrer » pour le joint.</p></div></li><li><span class="mono">18 h</span><div><strong>Fin de tournée</strong><p>Le sédentaire complète la ligne à chiffrer avec la cotation du fournisseur et relit la proposition, si votre organisation le prévoit. Le commercial valide et envoie depuis sa messagerie. Les comptes rendus sont dans les fiches clients, les relances sont programmées.</p></div></li></ul></div>
+    <blockquote class="anecdote"><p>« Mon métier, c’était le vin, pas la distribution industrielle. Le soir, il me restait environ sept comptes rendus de visite et une ou deux propositions commerciales à rédiger, au moins deux heures d’administratif par jour. C’est ce temps-là que Kroko Labs veut rendre aux commerciaux terrain, quel que soit leur métier. »</p><cite>Maxime Fauquembergue, cofondateur, ancien commercial terrain dans le vin</cite></blockquote>
+  </div>
+</section>
 <section class="sec" id="mots">
   <div class="wrap">
     <h2>Les mots du terrain <span class="l2">deviennent vos références</span></h2>
@@ -767,6 +777,18 @@ td.no{color:var(--soft)}
         <svg class="arrow" viewBox="0 0 18 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1v24M2 18l7 8 7-8"/></svg>
         <div class="found"><small>L’app retrouve</small><span class="mono">GAN-COUP-C-T9</span><br>Gants anti-coupure niveau C, taille 9, la paire</div>
         
+      </article><article class="sector">
+        
+        <p class="said"><small>Le commercial dit</small>« comme la dernière fois, plus deux boîtes »</p>
+        <svg class="arrow" viewBox="0 0 18 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1v24M2 18l7 8 7-8"/></svg>
+        <div class="found"><small>L’app retrouve</small><span class="mono">historique</span><br>Dernière commande de ce client, plus 2 boîtes</div>
+        
+      </article><article class="sector">
+        
+        <p class="said"><small>Le commercial dit</small>« un joint spécial hors catalogue »</p>
+        <svg class="arrow" viewBox="0 0 18 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1v24M2 18l7 8 7-8"/></svg>
+        <div class="found"><small>L’app retrouve</small><span class="mono">à chiffrer</span><br>Ligne « à chiffrer », complétée avant l’envoi</div>
+        
       </article></div>
     <div class="rules-strip">
       <div><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><strong>L’IA ne fixe jamais un prix.</strong> Un moteur de règles calcule à partir de vos tarifs.</span></div>
@@ -774,8 +796,26 @@ td.no{color:var(--soft)}
     </div>
   </div>
 </section>
-
-
+<section class="sec" id="exemple">
+  <div class="wrap">
+    <h2>Exemple de proposition <span class="l2">pour un atelier de maintenance, données fictives</span></h2>
+    <p class="sec-lead">Ce que reçoit le responsable maintenance, avec des données fictives. Les prix catalogue sont ceux du distributeur fictif, la remise est celle de ce client : le moteur de règles l’applique, l’IA ne décide de rien.</p>
+    <div class="ex-dictee"><strong>Ce que le commercial a dicté</strong>« Visite chez Mécanique Durand. Ils veulent 40 roulements 6205 étanches, 10 boîtes de vis CHC M8 de 30 en inox et 25 paires de gants anti-coupure en taille 9. Livraison sous 48 heures. »</div>
+    <div class="ex-head" style="background:#16806E"><b>Fournitures Rhône Industrie → Mécanique Durand</b><span>Proposition n° 2026-287, fictive : Atelier de maintenance, livraison sous 48 heures. Remise appliquée : remise client, 15 %.</span></div>
+    <div class="tbl-wrap"><table><caption class="sr">Exemple de proposition chiffrée, données fictives</caption><thead><tr><th scope="col">Référence</th><th scope="col" class="num">Prix catalogue</th><th scope="col" class="num">Remise</th><th scope="col" class="num">Net unitaire</th><th scope="col" class="num">Quantité</th><th scope="col" class="num">Total HT</th></tr></thead><tbody><tr><th scope="row">Roulement 6205-2RS, étanche<br><span class="mono">ROU-6205-2RS</span></th><td class="num">6,40 €</td><td class="num">15 %</td><td class="num">5,44 €</td><td class="num">40</td><td class="num">217,60 €</td></tr><tr><th scope="row">Vis CHC M8 × 30 inox A2, boîte de 100<br><span class="mono">VIS-CHC-M8X30-A2</span></th><td class="num">22,60 €</td><td class="num">15 %</td><td class="num">19,21 €</td><td class="num">10</td><td class="num">192,10 €</td></tr><tr><th scope="row">Gants anti-coupure niveau C, taille 9, la paire<br><span class="mono">GAN-COUP-C-T9</span></th><td class="num">7,80 €</td><td class="num">15 %</td><td class="num">6,63 €</td><td class="num">25</td><td class="num">165,75 €</td></tr></tbody><tfoot><tr><th scope="row" colspan="5">Total HT</th><td class="num">575,45 €</td></tr></tfoot></table></div>
+    <p class="tbl-note">Dicté en 41 secondes en sortant de l’atelier, relu et envoyé par le commercial depuis sa messagerie. Le compte rendu et la relance de lundi sont préparés en même temps. Calcul : net unitaire = prix catalogue × (100 − remise) / 100 ; total = quantité × net unitaire.</p>
+  </div>
+</section>
+<section class="sec" id="perimetre">
+  <div class="wrap">
+    <h2>Ce que l’app fait, <span class="l2">et ce qu’elle ne fait pas</span></h2>
+    <div class="cards c2">
+      <div class="card"><h3>Ce qu’elle fait</h3><ul><li>Prend la dictée après la visite : pièces, quantités, délai, ce que le client a dit.</li><li>Retrouve les références dans votre catalogue à partir des mots et des abréviations de vos commerciaux.</li><li>Applique les prix nets, les remises par famille et les conditions de chaque compte.</li><li>Reprend la dernière commande d’un client si son historique d’achats est fourni ou lu dans votre CRM.</li><li>Crée une ligne « à chiffrer » pour un article hors catalogue, à compléter avant l’envoi.</li><li>Rédige le compte rendu de visite et programme la relance.</li></ul></div>
+      <div class="card"><h3>Ce qu’elle ne fait pas</h3><ul><li>Ne fixe aucun prix : le moteur de règles applique vos tarifs et vos conditions.</li><li>N’envoie rien seule : le commercial relit et valide ; une relecture par le sédentaire ou l’ADV peut être ajoutée.</li><li>Ne remplace pas votre logiciel de gestion : ni stock, ni facturation, ni boutique en ligne.</li><li>N’enregistre jamais un rendez-vous sans l’accord du client ; la dictée après la visite est le mode par défaut.</li><li>N’analyse jamais la voix ni les émotions.</li></ul></div>
+    </div>
+    <div class="more-row"><a class="lnk" href="/comment-ca-marche">Voir les quatre écrans</a><a class="lnk" href="/confiance">Nos engagements sur les prix et l’enregistrement</a></div>
+  </div>
+</section>
 <section class="sec" id="calcul" data-default="industrie">
   <div class="wrap">
     <h2>Calculez <span class="l2">le temps gagné par votre équipe</span></h2>
@@ -797,12 +837,19 @@ td.no{color:var(--soft)}
     <p class="disclaimer">Estimation indicative, pas une promesse de résultat. Elle part d’une visite sur cinq qui donne lieu à une proposition, de 5 minutes par proposition avec Kroko Labs (dictée et relecture) et d’une heure par rendez-vous, trajet compris. Le temps gagné sur les comptes rendus et les relances vient en plus.</p>
   </div>
 </section>
-
+<section class="sec tight" id="objections">
+  <div class="wrap">
+    <h2>Les objections <span class="l2">qu’on entend le plus</span></h2>
+    <div class="rows-wrap"><ul class="rows"><li><strong>« Une erreur de référence, et c’est la mauvaise pièce qui part. »</strong><span>C’est pour cela que l’app ne devine pas. Quand deux références peuvent convenir, elle pose la question au commercial. Et rien ne part sans sa relecture.</span></li><li><strong>« Nos remises par famille, c’est compliqué. »</strong><span>C’est ce que le moteur de règles sait faire. À la mise en place, nous écrivons vos règles avec vous : prix nets, remises par famille, conditions par compte. Ensuite elles s’appliquent à chaque proposition, sans recopie.</span></li><li><strong>« Nos technico-commerciaux sont déjà équipés. »</strong><span>L’app ne remplace ni leur téléphone ni votre logiciel de gestion. Elle prend ce qu’ils disent en sortant de l’atelier et en fait la proposition, le compte rendu et la relance.</span></li><li><strong>« On a déjà un logiciel de gestion et un CRM. »</strong><span>Un export Excel ou CSV de votre logiciel de gestion suffit pour le catalogue et les tarifs. Si vous avez un CRM, nous le relions à Kroko Labs : les comptes rendus et les propositions y sont rangés.</span></li></ul></div>
+    
+  </div>
+</section>
 <section class="sec center tight" id="questions">
   <div class="wrap">
-    <h2>Questions fréquentes</h2>
-    <div class="faq"><details><summary>L’app comprend-elle les mots de nos commerciaux ?</summary><p>C’est ce que nous réglons à la mise en place, avec votre catalogue : les abréviations et les noms d’usage de votre métier sont reliés à vos références. Si une référence reste ambiguë, l’app pose la question.</p></details><details><summary>Ça marche avec notre logiciel ?</summary><p>Oui. Un export Excel ou CSV de votre logiciel de gestion suffit. Nous chargeons votre catalogue, vos tarifs et les conditions de vos clients à la mise en place, et la mise à jour du catalogue et des prix est incluse dans l’abonnement. Si vous avez un CRM, nous le relions à Kroko Labs avec un connecteur MCP.</p></details><details><summary>Comment se passe le pilote ?</summary><p>90 jours, sur une partie de votre équipe, avec votre catalogue. On le juge sur les propositions réellement envoyées et le temps gagné.</p></details></div>
-    <div class="more-row"><a class="lnk" href="/questions">Toutes les questions</a></div>
+    <h2>Questions fréquentes <span class="l2">en distribution industrielle</span></h2>
+    <div class="faq"><details><summary>Nos désignations sont longues et techniques. L’app retrouve la bonne référence ?</summary><p>Oui, à partir de votre catalogue. À la mise en place, nous relions les mots et les abréviations de vos commerciaux à vos références. Si deux références peuvent convenir, l’app pose la question plutôt que de choisir.</p></details><details><summary>Les prix nets et les remises par famille sont respectés ?</summary><p>Oui. L’IA retrouve les références et les quantités ; les prix nets, les remises par famille et les conditions de chaque compte sont calculés par un moteur de règles, à partir des règles écrites avec vous à la mise en place.</p></details><details><summary>Le commercial dit « comme la dernière fois ». L’app comprend ?</summary><p>Oui, si l’historique d’achats du client nous est fourni à la mise en place ou s’il est lu dans votre CRM relié. Sinon, l’app pose la question.</p></details><details><summary>Notre catalogue compte des dizaines de milliers de références. Comment le récupérez-vous ?</summary><p>Un export Excel ou CSV de votre logiciel de gestion suffit. Nous le chargeons à la mise en place, avec vos tarifs et les conditions de vos clients, et la mise à jour du catalogue et des prix est incluse dans l’abonnement.</p></details><details><summary>Et un article hors catalogue, ou qu’il faut faire coter par le fournisseur ?</summary><p>L’app le signale et crée une ligne « à chiffrer ». Le commercial ou le sédentaire la complète avant l’envoi ; la proposition ne part pas avec un prix manquant.</p></details><details><summary>Pas de réseau dans l’atelier, comment fait-on ?</summary><p>Le commercial dicte quand même. La dictée est gardée sur le téléphone et traitée dès que le réseau revient.</p></details><details><summary>Notre sédentaire ou l’ADV peut relire avant l’envoi ?</summary><p>Oui, c’est une option réglée à la mise en place. Le commercial valide toujours ; la relecture par le sédentaire ou l’ADV vient en plus.</p></details><details><summary>Les comptes rendus de visite vont dans notre CRM ?</summary><p>Non. Sans CRM, l’app a sa propre fiche client : comptes rendus, propositions et relances y sont rangés. Si vous avez déjà un CRM, nous le relions à Kroko Labs avec un connecteur MCP : vos clients sont retrouvés dans l’app, et les comptes rendus et propositions sont rangés dans votre CRM. Nous regardons ensemble pendant la démo ce que votre CRM permet.</p></details></div>
+    <div class="more-row"><a class="lnk" href="/questions">Toutes les questions</a><a class="lnk" href="/vins-spiritueux">Vins et spiritueux</a><a class="lnk" href="/negoce-materiaux">Négoce de matériaux</a><a class="lnk" href="/autres-secteurs">Autres secteurs</a></div>
+    <p class="author">Page écrite par l’équipe Kroko Labs. <a href="/a-propos">À propos des fondateurs</a>.</p>
   </div>
 </section>
 
