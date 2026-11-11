@@ -740,16 +740,25 @@ html.intro .site-h .logo{opacity:0}
   </div>
 </section>
 
-<section class="sec" id="benefice">
+<section class="sec" id="calcul" data-default="negoce">
   <div class="wrap">
     <h2>Ce que ça change <span class="l2">pour votre équipe</span></h2>
-    <p class="sec-lead">Estimation pour une équipe de 8 commerciaux, 12 visites par semaine chacun, 25 minutes pour faire un devis aujourd’hui.</p>
-    <div class="kpis">
-      <div class="kpi"><b class="mono">28<small> heures</small></b><span>récupérées chaque mois, pour toute l’équipe</span></div>
-      <div class="kpi"><b class="mono">83</b><span>propositions préparées sans saisie chaque mois</span></div>
-      <div class="kpi"><b class="mono">27</b><span>rendez-vous en plus par mois</span></div>
+    <p class="sec-lead">Réglez les trois curseurs avec vos chiffres : l’estimation se met à jour en direct. Valeurs de départ : 8 commerciaux, 12 visites par semaine chacun, 25 minutes pour faire un devis aujourd’hui.</p>
+    <div class="c2">
+      <div class="c2-in">
+        <div class="sl"><div class="sl-top"><label for="cN">Commerciaux terrain</label><output id="oN" for="cN" class="mono">8</output></div><input id="cN" type="range" min="1" max="50" step="1" value="8"></div>
+        <div class="sl"><div class="sl-top"><label for="cV">Visites par semaine, par commercial</label><output id="oV" for="cV" class="mono">12</output></div><input id="cV" type="range" min="1" max="40" step="1" value="12"></div>
+        <div class="sl"><div class="sl-top"><label for="cTp">Minutes pour faire une proposition aujourd’hui</label><output id="oT" for="cTp" class="mono">25 min</output></div><input id="cTp" type="range" min="5" max="90" step="5" value="25"></div>
+      </div>
+      <div class="c2-out" aria-live="polite">
+        <div class="c2-main"><span class="v mono" id="rH">0</span><span class="k">récupérées chaque mois, pour toute l’équipe</span></div>
+        <div class="c2-sub">
+          <div><b class="mono" id="rW">0</b><span>propositions préparées sans saisie chaque mois</span></div>
+          <div><b class="mono" id="rR">0</b><span>rendez-vous en plus par mois</span></div>
+        </div>
+      </div>
     </div>
-    <p class="kpi-note">Hypothèses : une visite sur cinq donne une proposition, 5 minutes par proposition avec Kroko Labs, une heure par rendez-vous. <a href="/comment-ca-marche#calcul">Faites le calcul avec vos chiffres</a>.</p>
+    <p class="disclaimer">Estimation indicative, pas une promesse de résultat. Elle part d’une visite sur cinq qui donne lieu à une proposition, de 5 minutes par proposition avec Kroko Labs (dictée et relecture) et d’une heure par rendez-vous, trajet compris. Le temps gagné sur les comptes rendus et les relances vient en plus.</p>
     <p class="kpi-src">Selon Salesforce, les commerciaux consacrent moins d’un tiers de leur temps à vendre : 28&nbsp;% dans le monde, 32&nbsp;% en France.<br><span>Source : Salesforce, State of Sales 2022 (monde) et enquête 2024 (France).</span></p>
   </div>
 </section>
@@ -1100,6 +1109,28 @@ const SCREENS = {
   envoi: s => topHTML("Brouillon prêt", s) + `<div class="mail" style="--v:${s.color}"><div><span class="k">À : </span>${s.contact}, ${s.client}</div><div><span class="k">Objet : </span>Votre proposition, ${s.site.toLowerCase()}</div><div style="margin-top:4px">Bonjour, suite à notre rendez-vous, voici notre proposition. Je reste disponible pour en parler.</div><div class="att"><i></i><span>Proposition-${s.numero}.pdf</span></div></div><span class="chip">Relance proposée ${s.relance}</span><div class="btn-row"><span class="app-btn">Ouvrir le brouillon</span><span class="app-btn alt">Modifier</span></div>`
 };
 document.querySelectorAll("[data-screen]").forEach(el => { const k = el.dataset.sector || "negoce"; el.innerHTML = SCREENS[el.dataset.screen](SECTORS[k], k); if (el.dataset.screen === "mail") el.closest(".screen").classList.add("ext"); });
+
+/* Calculateur simplifié : trois curseurs. Hypothèses fixes : 1 visite sur 5 donne une proposition,
+   5 min par proposition avec Kroko Labs, 1 h par rendez-vous, 1 mois = 52/12 semaines.
+   Valeurs de départ par métier = hypothèses à valider, pas des mesures. */
+const PRESETS = {negoce: {v: 12, tp: 25}, industrie: {v: 10, tp: 30}, vin: {v: 15, tp: 15}, autre: {v: 12, tp: 25}};
+const SHARE = 0.2, WITH_NL = 5, RDV_H = 1;
+const nf0 = new Intl.NumberFormat("fr-FR", {maximumFractionDigits: 0});
+const fill = el => el.style.setProperty("--p", ((el.value - el.min) / (el.max - el.min) * 100) + "%");
+function calc() {
+  const n = +$("cN").value, v = +$("cV").value, tp = +$("cTp").value;
+  $("oN").textContent = n; $("oV").textContent = v; $("oT").textContent = tp + "\u00a0min";
+  ["cN", "cV", "cTp"].forEach(id => fill($(id)));
+  const minW = v * SHARE * Math.max(0, tp - WITH_NL);       // minutes gagnées par semaine et par commercial
+  const hours = n * minW / 60 * 52 / 12;
+  $("rH").innerHTML = nf0.format(Math.round(hours)) + '<small class="u">heures</small>';
+  $("rW").textContent = nf0.format(Math.round(n * v * SHARE * 52 / 12));   // propositions préparées par mois
+  $("rR").textContent = nf0.format(Math.floor(hours / RDV_H));
+}
+const pr = PRESETS[$("calcul").dataset.default] || PRESETS.autre;
+$("cV").value = pr.v; $("cTp").value = pr.tp;
+["cN", "cV", "cTp"].forEach(id => $(id).addEventListener("input", calc));
+calc();
 </script>
 </body>
 </html>
