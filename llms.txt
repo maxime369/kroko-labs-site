@@ -35,7 +35,7 @@ Contact : contact@kroko-labs.fr
 - [Comment ça marche](https://kroko-labs.fr/comment-ca-marche) : les étapes, de la dictée à l’envoi, et le calculateur de temps gagné
 - [Questions fréquentes](https://kroko-labs.fr/questions) : ce qu’est Kroko Labs, logiciel, CRM, prix, pilote, enregistrement, données
 - [Confiance](https://kroko-labs.fr/confiance) : prix, enregistrement avec accord, RGPD, accord de confidentialité
-- [Démo](https://kroko-labs.fr/demo) : essayer l’app avec des données fictives, ou réserver 30 minutes en visio
+- [Démo](https://kroko-labs.fr/demo) : réserver une démo de 30 minutes en visio
 
 ## Secteurs
 
