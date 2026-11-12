@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://kroko-labs.fr/">
 <meta property="og:title" content="Kroko Labs : l’assistant IA pour vos commerciaux terrain">
 <meta property="og:description" content="Vos commerciaux dictent leur visite en sortant du rendez-vous. Kroko Labs prépare le devis à vos couleurs, avec vos références et vos prix.">
-<meta property="og:image" content="https://kroko-labs.fr/img/partage.png?v=2">
+<meta property="og:image" content="https://kroko-labs.fr/img/partage.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Kroko Labs : l’assistant IA pour vos commerciaux terrain">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kroko Labs : l’assistant IA pour vos commerciaux terrain">
 <meta name="twitter:description" content="Vos commerciaux dictent leur visite en sortant du rendez-vous. Kroko Labs prépare le devis à vos couleurs, avec vos références et vos prix.">
-<meta name="twitter:image" content="https://kroko-labs.fr/img/partage.png?v=2">
+<meta name="twitter:image" content="https://kroko-labs.fr/img/partage.png?v=3">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27113%20113%20567%20567%27%3E%3Ccircle%20cx%3D%27396.5%27%20cy%3D%27396.5%27%20r%3D%27283.5%27%20fill%3D%27%237D31F5%27%2F%3E%3Cpath%20fill%3D%27%23fff%27%20d%3D%27M390.93%20387.21L372.66%20412.86L372.66%20473L328.44%20473L328.44%20267.23L372.66%20267.23L372.66%20353.31L375.02%20353.31L397.42%20319.11L433.68%20267.23L483.21%20267.23L421.59%20354.2L486.16%20473L436.33%20473L390.93%20387.21Z%27%2F%3E%3Crect%20fill%3D%27%23fff%27%20x%3D%27317%27%20y%3D%27515%27%20width%3D%27159%27%20height%3D%2734%27%2F%3E%3C%2Fsvg%3E">
 <link rel="preload" href="/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -651,6 +651,9 @@ td.no{color:var(--soft)}
 .f-tag{margin:16px 0 20px}
 .f-bottom{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:.86rem}
 
+/* Captures réelles de l'app de démo dans le cadre du téléphone (12 novembre 2026) */
+.screen.shot{--app-bg:#F5F5F3;--app-text:#17211D;--app-muted:#6E7772;background:#F5F5F3}
+.screen.shot img{display:block;flex:1;min-height:0;width:100%;object-fit:cover;object-position:50% 55%}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -745,7 +748,7 @@ html.intro .site-h .logo{opacity:0}
         <a class="btn btn-ghost" href="/demo#rendez-vous">Réserver 30 min</a>
       </div>
     </div>
-    <div class="hero-phone"><img class="hero-shot" src="/img/telephone-devis.webp" width="489" height="974" fetchpriority="high" alt="Écran de l’app : une proposition prête à relire et à envoyer (données fictives)"></div>
+    <div class="hero-phone"><div class="phone"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:43</span><span class="bat"></span></div><img src="/img/app-pdf-conditions.webp" alt="Proposition PDF de l’app Kroko Deals : conditions réservées au Comptoir des Halles, total 1 305,48 € HT (données fictives)" width="640" height="1247" decoding="async"></div></div></div>
   </div>
 </section>
 
@@ -754,8 +757,8 @@ html.intro .site-h .logo{opacity:0}
     <h2>Comment ça marche, <span class="l2">en 3 étapes</span></h2>
     <div class="cards c3 steps3">
       <div class="card"><span class="ch-n">1</span><h3>Le commercial dicte</h3><p>En sortant du rendez-vous, il raconte sa visite en une à trois minutes, à l’arrêt.</p></div>
-      <div class="card"><span class="ch-n">2</span><h3>L’app prépare</h3><p>Le devis chiffré avec vos références et les prix de ce client, le compte rendu et la relance. S’il manque un détail, elle pose la question.</p></div>
-      <div class="card"><span class="ch-n">3</span><h3>Il valide et envoie</h3><p>Il relit, corrige si besoin, et envoie depuis sa messagerie. Rien ne part sans lui.</p></div>
+      <div class="card"><span class="ch-n">2</span><h3>L’app prépare</h3><p>Le devis aux prix de ce client, puis le compte rendu et la relance. S’il manque une quantité, elle demande.</p></div>
+      <div class="card"><span class="ch-n">3</span><h3>Il valide et envoie</h3><p>Il relit, corrige si besoin, et l’envoie depuis sa messagerie.</p></div>
     </div>
     <p class="sec-lead def">Kroko Labs est une application web pour les commerciaux terrain des PME B2B en France. Après chaque visite, le commercial dicte ce qui s’est dit ; l’app prépare la proposition chiffrée à vos couleurs, avec vos références et vos prix, ainsi que le compte rendu et la relance. Un moteur de règles calcule les prix, l’IA n’en fixe aucun, et le commercial relit et valide avant tout envoi.</p>
     <div class="more-row"><a class="lnk" href="/comment-ca-marche#comment">Voir les écrans en détail</a><a class="lnk" href="/questions">Les questions en bref</a></div>
@@ -790,7 +793,7 @@ html.intro .site-h .logo{opacity:0}
     <h2>Des prix justes, <span class="l2">rien ne part sans le commercial</span></h2>
     <div class="cards c4">
       <div class="card inv"><h3>L’IA ne fixe jamais un prix</h3><p>Elle retrouve les références et les quantités. Un moteur de règles calcule les prix, les remises et les conditions du client.</p></div>
-      <div class="card"><h3>Rien ne part sans le commercial</h3><p>L’app prépare des brouillons. Le commercial relit, valide, puis envoie lui-même.</p></div>
+      <div class="card"><h3>Le commercial envoie lui-même</h3><p>L’app prépare des brouillons, jamais d’envoi automatique.</p></div>
       <div class="card"><h3>Ça marche avec votre logiciel</h3><p>Ça marche avec votre logiciel ? Un export Excel ou CSV de votre logiciel de gestion suffit. Votre CRM peut aussi être relié.</p></div>
       <div class="card"><h3>Jamais d’enregistrement sans accord</h3><p>La dictée après la visite est le mode par défaut. L’enregistrement est une option, avec l’accord du client.</p></div>
     </div>
@@ -801,7 +804,7 @@ html.intro .site-h .logo{opacity:0}
 <section class="sec" id="secteurs">
   <div class="wrap">
     <h2>Elle comprend <span class="l2">le vocabulaire de vos commerciaux</span></h2>
-    <p class="sec-lead">Les mots du terrain sont reliés à vos références à la mise en place, avec votre catalogue.</p>
+    <p class="sec-lead">À la mise en place, on relie leurs abréviations et leurs noms d’usage à vos références.</p>
     <div class="sectors">
       <article class="sector">
         <h3>Vins et spiritueux</h3>

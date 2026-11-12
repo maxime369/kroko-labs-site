@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://kroko-labs.fr/demo">
 <meta property="og:title" content="Démo : essayez l’app ou réservez 30 minutes | Kroko Labs">
 <meta property="og:description" content="Essayez l’app Kroko Labs tout de suite dans votre navigateur, ou voyez-la avec nous en 30 minutes de visio, sur un extrait de votre catalogue.">
-<meta property="og:image" content="https://kroko-labs.fr/img/partage.png?v=2">
+<meta property="og:image" content="https://kroko-labs.fr/img/partage.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Démo : essayez l’app ou réservez 30 minutes | Kroko Labs">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Démo : essayez l’app ou réservez 30 minutes | Kroko Labs">
 <meta name="twitter:description" content="Essayez l’app Kroko Labs tout de suite dans votre navigateur, ou voyez-la avec nous en 30 minutes de visio, sur un extrait de votre catalogue.">
-<meta name="twitter:image" content="https://kroko-labs.fr/img/partage.png?v=2">
+<meta name="twitter:image" content="https://kroko-labs.fr/img/partage.png?v=3">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27113%20113%20567%20567%27%3E%3Ccircle%20cx%3D%27396.5%27%20cy%3D%27396.5%27%20r%3D%27283.5%27%20fill%3D%27%237D31F5%27%2F%3E%3Cpath%20fill%3D%27%23fff%27%20d%3D%27M390.93%20387.21L372.66%20412.86L372.66%20473L328.44%20473L328.44%20267.23L372.66%20267.23L372.66%20353.31L375.02%20353.31L397.42%20319.11L433.68%20267.23L483.21%20267.23L421.59%20354.2L486.16%20473L436.33%20473L390.93%20387.21Z%27%2F%3E%3Crect%20fill%3D%27%23fff%27%20x%3D%27317%27%20y%3D%27515%27%20width%3D%27159%27%20height%3D%2734%27%2F%3E%3C%2Fsvg%3E">
 <link rel="preload" href="/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -648,6 +648,9 @@ td.no{color:var(--soft)}
 .f-tag{margin:16px 0 20px}
 .f-bottom{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:.86rem}
 
+/* Captures réelles de l'app de démo dans le cadre du téléphone (12 novembre 2026) */
+.screen.shot{--app-bg:#F5F5F3;--app-text:#17211D;--app-muted:#6E7772;background:#F5F5F3}
+.screen.shot img{display:block;flex:1;min-height:0;width:100%;object-fit:cover;object-position:50% 55%}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -1536,7 +1539,7 @@ const GUIDE = {
   sendsheet: ["Envoyer", "Gmail ou Outlook, au choix.", "La proposition s’ouvre en brouillon dans la messagerie du commercial. Rien ne part sans lui.", "choisissez Gmail ou Outlook."],
   mail: ["Envoyer : le brouillon", "Le mail est prêt, il n’a plus qu’à l’envoyer.", "Adresse du client récupérée dans sa fiche, objet, message rédigé et proposition en pièce jointe. Le commercial relit, retouche le texte s’il veut, et envoie lui-même.", "touchez le texte pour le modifier, puis « Envoyer »."],
   bravo: ["C’est fait", "La proposition part le jour de la visite.", "Compte rendu rangé, relance datée, proposition prête en brouillon dans la messagerie. Le commercial relit et envoie lui-même.", "allez voir le coach."],
-  coach: ["Coach (offre Équipe)", "Une aide personnelle, pas une notation.", "Le coach prépare le prochain rendez-vous à partir de l’historique du client, propose un défi, un quiz produits et des entraînements. Le commercial et son manager voient la même chose.", "jouez au quiz du jour, ou entraînez-vous sur une objection prix."],
+  coach: ["Coach", "Une aide personnelle, pas une notation.", "Le coach prépare le prochain rendez-vous à partir de l’historique du client, propose un défi, un quiz produits et des entraînements. Le commercial et son manager voient la même chose.", "jouez au quiz du jour, ou entraînez-vous sur une objection prix."],
   quiz: ["Coach : le quiz", "Trois questions sur votre catalogue.", "Références, remises, vocabulaire : de quoi répondre juste devant le client.", "répondez aux trois questions."],
   train: ["Coach : l’entraînement", "S’entraîner à répondre à une objection prix.", "Un client fictif, des réponses à choisir et un retour immédiat. Un entraînement, pas une évaluation.", "choisissez la meilleure réponse."],
   account: ["Mon compte", "Votre catalogue, vos prix, votre image.", "L’app et les propositions sont personnalisées pour votre entreprise : vos couleurs, votre logo, votre charte. Catalogue, tarifs et conditions clients sont mis en place pour vous, puis tenus à jour. Un export Excel ou CSV de votre logiciel de gestion suffit.", "changez de métier au-dessus du téléphone et refaites le parcours."]
@@ -1691,7 +1694,7 @@ const VIEWS = {
   },
   coach() {
     const a = A(), n = nextClient();
-    return top2("Coach, offre Équipe", "Votre coach") +
+    return top2("Coach", "Votre coach") +
       `<div class="next-card"><span class="k">Prochain rendez-vous</span><span class="n">${n.c.name}, ${hfr(n.t)}</span><ul><li>Objectif : ${a.next.objective}</li><li>À proposer : ${a.next.proposer.map(p => p[0]).join(", ")}</li></ul>${btn("Préparer la visite", "go", "prep", "small dark")}</div>` +
       `<div class="a-card tip">${tile("target")}<span><strong>Défi de la semaine</strong><p class="a-note" style="margin-top:2px">${a.defi}</p></span></div>` +
       `<div class="a-card"><div class="a-row" style="border:0;padding:0">${tile("bulb")}<span><strong>Quiz produits du jour</strong><small>3 questions sur votre catalogue, 1 minute</small></span>${btn("Jouer", "quiz-start", undefined, "small")}</div></div>` +
