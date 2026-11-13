@@ -36,6 +36,7 @@ Contact : contact@kroko-labs.fr
 - [Questions fréquentes](https://kroko-labs.fr/questions) : ce qu’est Kroko Labs, logiciel, CRM, prix, pilote, enregistrement, données
 - [Confiance](https://kroko-labs.fr/confiance) : prix, enregistrement avec accord, RGPD, accord de confidentialité
 - [Démo](https://kroko-labs.fr/demo) : réserver une démo de 30 minutes en visio
+- [Contact](https://kroko-labs.fr/contact) : écrire aux fondateurs ou réserver 30 minutes
 
 ## Secteurs
 

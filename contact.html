@@ -838,7 +838,8 @@ td.no{color:var(--soft)}
       <div class="ct-box">
         <h2>Écrivez-nous</h2>
         <p>Nous répondons nous-mêmes, sans centre d’appels.</p>
-        <form class="ct-form" id="ctForm" action="mailto:contact@kroko-labs.fr" method="post" enctype="text/plain">
+        <form class="ct-form" id="ctForm" method="post">
+          <noscript><p class="ct-note">Sans JavaScript, ce formulaire ne peut pas préparer votre message : écrivez directement à <a href="mailto:contact@kroko-labs.fr">contact@kroko-labs.fr</a>.</p></noscript>
           <div class="two">
             <div><label for="ct-prenom">Votre prénom</label><input id="ct-prenom" name="prenom" autocomplete="given-name" required></div>
             <div><label for="ct-entreprise">Votre entreprise</label><input id="ct-entreprise" name="entreprise" autocomplete="organization"></div>
