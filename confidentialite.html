@@ -505,18 +505,19 @@ tfoot th,tfoot td{font-weight:600;border-top:2px solid var(--line-strong);border
 @media print{.page-plan{display:none}}
 .brouillon{display:block;margin-top:16px;padding:14px 18px;border-radius:14px;background:#FFF3B0;color:#5A4300;font-style:italic}
 
-/* Vidéo */
-.video{margin-top:56px;display:grid;gap:18px}
-.video-frame{position:relative;aspect-ratio:16/9;max-height:580px;border-radius:26px;border:1px solid var(--line);background:var(--surface);overflow:hidden;display:grid;place-items:center}
-.video-frame .poster{display:flex;gap:18px;align-items:center;opacity:.5;transform:scale(.62)}
-@media (max-width:640px){.video-frame{aspect-ratio:4/5}.video-frame .poster{transform:scale(.58)}}
-.play{position:absolute;display:flex;align-items:center;gap:12px;padding:10px 22px 10px 10px;border-radius:999px;border:0;background:var(--text);color:var(--bg);font:inherit;font-weight:600;cursor:pointer}
-.play i{width:36px;height:36px;border-radius:50%;background:var(--bg);display:grid;place-items:center}
-.play i::after{content:"";border-left:11px solid var(--text);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
-.chapters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
-.chapters li{padding:12px 16px;border:1px solid var(--line);border-radius:999px;font-size:.95rem}
-.chapters .mono{color:var(--muted);margin-right:8px;font-size:.86rem}
-.video-msg{color:var(--muted);min-height:1.5em;text-align:center}
+/* Vidéo de l'accueil (13 novembre 2026) : fichier MP4 servi par le site, lancé au clic, jamais en lecture automatique */
+.vplayer{position:relative;margin-top:40px;aspect-ratio:16/9;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 40px 90px -50px rgba(40,10,90,.45)}
+.vplayer video{display:block;width:100%;height:100%;object-fit:cover;background:#fff}
+.vplay{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:6px 24px 6px 6px;border-radius:999px;border:0;background:var(--btn-grad);color:var(--btn-text);box-shadow:0 0 0 4px var(--ring);font:inherit;font-family:var(--font-heading);font-weight:600;font-size:1rem;cursor:pointer;white-space:nowrap}
+.vplay i{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.vplay i::after{content:"";border-left:13px solid var(--accent);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+.vplay:focus-visible{outline:3px solid var(--text);outline-offset:4px}
+.vplayer.on .vplay,.vplay[hidden]{display:none}
+@media (max-width:640px){.vplayer{border-radius:18px}.vplay{bottom:12px;min-height:44px;font-size:.92rem;padding:4px 18px 4px 4px}.vplay i{width:36px;height:36px}}
+.vtrans{margin-top:18px;color:var(--muted)}
+.vtrans summary{cursor:pointer;font-weight:600;color:var(--text);min-height:44px;display:inline-flex;align-items:center}
+.vtrans ol{margin:8px 0 0;padding-left:1.3em;display:grid;gap:6px}
+@media print{#video{display:none}}
 
 /* Secteurs (mots du terrain) */
 .sectors{display:grid;gap:16px;margin-top:56px}

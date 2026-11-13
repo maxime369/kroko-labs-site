@@ -32,6 +32,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","@id":"https://kroko-labs.fr/#app","name":"Kroko Labs","url":"https://kroko-labs.fr/","inLanguage":"fr","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Vos commerciaux dictent leur visite en sortant du rendez-vous. Kroko Labs prépare le devis à vos couleurs, avec vos références et vos prix.","featureList":["Dictée du compte rendu après la visite","Proposition chiffrée à vos couleurs, avec vos références et vos prix","Compte rendu et relance préparés","Prix calculés par un moteur de règles, jamais par l’IA","Le commercial relit et valide avant tout envoi"],"audience":{"@type":"BusinessAudience","audienceType":"PME B2B avec des commerciaux terrain"},"publisher":{"@id":"https://kroko-labs.fr/#organization"}}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"Une visite chez un restaurateur, de la dictée à la proposition envoyée","description":"En 36 secondes : le commercial dicte sa visite, l’app retrouve les références, le moteur de règles calcule les prix et la proposition part à 9 h 02. Maison de vins et client fictifs.","thumbnailUrl":"https://kroko-labs.fr/img/video-rembobinage.webp","uploadDate":"2026-11-13T12:00:00+01:00","duration":"PT36S","inLanguage":"fr","contentUrl":"https://kroko-labs.fr/media/rembobinage-1080.mp4","transcript":"9 h 02 : la proposition est partie. La visite au Comptoir des Halles s’est terminée à 9 h. Retour à 9 h 00 : garé devant le client, le commercial raconte sa visite en deux minutes, à l’arrêt, jamais en conduisant. Il dit « trente-six Brut Réserve, dix-huit rosés, douze blancs de blancs, conditions CHR, livraison jeudi matin ». L’app retrouve les références et les quantités dans le catalogue : Brut Réserve 75 cl × 36, Rosé 75 cl × 18, Blanc de blancs 75 cl × 12. Le moteur de règles calcule les prix nets : Brut Réserve à 19,50 € au catalogue, −8 % aux conditions CHR, soit 17,94 € ; 36 bouteilles font 645,84 € HT. L’IA ne fixe jamais un prix. La proposition sort aux couleurs de la maison : couverture au nom du client, conditions, signature du commercial. Total : 1 305,48 € HT. Le commercial relit et l’envoie lui-même : rien ne part sans lui. La relance est déjà prête, le compte rendu aussi.","publisher":{"@id":"https://kroko-labs.fr/#organization"}}
+</script>
 
 <script>try{if(!sessionStorage.getItem("nego-intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("intro")}catch(e){}</script>
 <style>@font-face{font-family:'Jost';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/jost-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
@@ -508,18 +511,19 @@ tfoot th,tfoot td{font-weight:600;border-top:2px solid var(--line-strong);border
 @media print{.page-plan{display:none}}
 .brouillon{display:block;margin-top:16px;padding:14px 18px;border-radius:14px;background:#FFF3B0;color:#5A4300;font-style:italic}
 
-/* Vidéo */
-.video{margin-top:56px;display:grid;gap:18px}
-.video-frame{position:relative;aspect-ratio:16/9;max-height:580px;border-radius:26px;border:1px solid var(--line);background:var(--surface);overflow:hidden;display:grid;place-items:center}
-.video-frame .poster{display:flex;gap:18px;align-items:center;opacity:.5;transform:scale(.62)}
-@media (max-width:640px){.video-frame{aspect-ratio:4/5}.video-frame .poster{transform:scale(.58)}}
-.play{position:absolute;display:flex;align-items:center;gap:12px;padding:10px 22px 10px 10px;border-radius:999px;border:0;background:var(--text);color:var(--bg);font:inherit;font-weight:600;cursor:pointer}
-.play i{width:36px;height:36px;border-radius:50%;background:var(--bg);display:grid;place-items:center}
-.play i::after{content:"";border-left:11px solid var(--text);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
-.chapters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
-.chapters li{padding:12px 16px;border:1px solid var(--line);border-radius:999px;font-size:.95rem}
-.chapters .mono{color:var(--muted);margin-right:8px;font-size:.86rem}
-.video-msg{color:var(--muted);min-height:1.5em;text-align:center}
+/* Vidéo de l'accueil (13 novembre 2026) : fichier MP4 servi par le site, lancé au clic, jamais en lecture automatique */
+.vplayer{position:relative;margin-top:40px;aspect-ratio:16/9;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 40px 90px -50px rgba(40,10,90,.45)}
+.vplayer video{display:block;width:100%;height:100%;object-fit:cover;background:#fff}
+.vplay{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:6px 24px 6px 6px;border-radius:999px;border:0;background:var(--btn-grad);color:var(--btn-text);box-shadow:0 0 0 4px var(--ring);font:inherit;font-family:var(--font-heading);font-weight:600;font-size:1rem;cursor:pointer;white-space:nowrap}
+.vplay i{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.vplay i::after{content:"";border-left:13px solid var(--accent);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+.vplay:focus-visible{outline:3px solid var(--text);outline-offset:4px}
+.vplayer.on .vplay,.vplay[hidden]{display:none}
+@media (max-width:640px){.vplayer{border-radius:18px}.vplay{bottom:12px;min-height:44px;font-size:.92rem;padding:4px 18px 4px 4px}.vplay i{width:36px;height:36px}}
+.vtrans{margin-top:18px;color:var(--muted)}
+.vtrans summary{cursor:pointer;font-weight:600;color:var(--text);min-height:44px;display:inline-flex;align-items:center}
+.vtrans ol{margin:8px 0 0;padding-left:1.3em;display:grid;gap:6px}
+@media print{#video{display:none}}
 
 /* Secteurs (mots du terrain) */
 .sectors{display:grid;gap:16px;margin-top:56px}
@@ -808,6 +812,23 @@ html.intro .site-h .logo{opacity:0}
     </ol>
     <p class="sec-lead def">Kroko Labs est une application web pour les commerciaux terrain des PME B2B en France. Après chaque visite, le commercial dicte ce qui s’est dit ; l’app prépare la proposition chiffrée à vos couleurs, avec vos références et vos prix, ainsi que le compte rendu et la relance. Un moteur de règles calcule les prix, l’IA n’en fixe aucun, et le commercial relit et valide avant tout envoi.</p>
     <div class="more-row"><a class="lnk" href="/comment-ca-marche#comment">Voir les écrans en détail</a><a class="lnk" href="/questions">Les questions en bref</a></div>
+  </div>
+</section>
+
+<section class="sec" id="video">
+  <div class="wrap">
+    <h2>Une visite, <span class="l2">en 36 secondes</span></h2>
+    <p class="sec-lead">De la dictée sur le parking à la proposition envoyée, avec les vrais écrans de l’app. La maison de vins et son client sont fictifs.</p>
+    <div class="vplayer">
+      <video controls playsinline muted preload="none" data-poster="/img/video-rembobinage.webp" width="1280" height="720" aria-describedby="vtrans" title="Une visite chez un restaurateur, en 36 secondes">
+        <source src="/media/rembobinage-720.mp4" type="video/mp4" media="(max-width: 800px)">
+        <source src="/media/rembobinage-1080.mp4" type="video/mp4">
+        <a href="/media/rembobinage-1080.mp4">Voir la vidéo (MP4, 36 secondes)</a>
+      </video>
+      <button class="vplay" type="button" hidden aria-label="Lire la vidéo, 36 secondes"><i aria-hidden="true"></i>Lire la vidéo · 36 s</button>
+    </div>
+    <details class="vtrans" id="vtrans"><summary>Le texte de la vidéo</summary><ol><li>9 h 02 : la proposition est partie. La visite au Comptoir des Halles s’est terminée à 9 h.</li><li>Retour à 9 h 00 : garé devant le client, le commercial raconte sa visite en deux minutes, à l’arrêt, jamais en conduisant.</li><li>Il dit « trente-six Brut Réserve, dix-huit rosés, douze blancs de blancs, conditions CHR, livraison jeudi matin ».</li><li>L’app retrouve les références et les quantités dans le catalogue : Brut Réserve 75 cl × 36, Rosé 75 cl × 18, Blanc de blancs 75 cl × 12.</li><li>Le moteur de règles calcule les prix nets : Brut Réserve à 19,50 € au catalogue, −8 % aux conditions CHR, soit 17,94 € ; 36 bouteilles font 645,84 € HT. L’IA ne fixe jamais un prix.</li><li>La proposition sort aux couleurs de la maison : couverture au nom du client, conditions, signature du commercial. Total : 1 305,48 € HT.</li><li>Le commercial relit et l’envoie lui-même : rien ne part sans lui.</li><li>La relance est déjà prête, le compte rendu aussi.</li></ol></details>
+    <div class="more-row"><a class="lnk" href="/demo">Réserver une démo de 30 minutes</a></div>
   </div>
 </section>
 
@@ -1193,6 +1214,21 @@ const pr = PRESETS[$("calcul").dataset.default] || PRESETS.autre;
 $("cV").value = pr.v; $("cTp").value = pr.tp;
 ["cN", "cV", "cTp"].forEach(id => $(id).addEventListener("input", calc));
 calc();
+
+/* Vidéo de l'accueil : le gros bouton lance la lecture ; les commandes natives prennent le relais */
+document.querySelectorAll(".vplayer").forEach(box => {
+  const v = box.querySelector("video"), b = box.querySelector(".vplay");
+  if (!v || !b) return;
+  v.controls = false; b.hidden = false;   // sans JavaScript : commandes natives seules, bouton masqué
+  // Affiche chargée seulement à l'approche du bloc, pour ne pas ralentir le haut de page
+  const poster = () => { if (v.dataset.poster) { v.poster = v.dataset.poster; delete v.dataset.poster; } };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { poster(); io.disconnect(); } }, {rootMargin: "600px 0px"});
+    io.observe(box);
+  } else poster();
+  b.addEventListener("click", () => { box.classList.add("on"); v.controls = true; v.play().catch(() => {}); v.focus(); });
+  v.addEventListener("play", () => { box.classList.add("on"); v.controls = true; });
+});
 </script>
 </body>
 </html>
