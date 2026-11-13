@@ -620,6 +620,15 @@ td.no{color:var(--soft)}
 .pilot-facts span{color:var(--muted)}
 
 /* Équipe */
+.facts{padding:8px 0 0}
+.facts ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:860px){.facts ul{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.facts li{display:flex;flex-direction:column;gap:4px}
+.facts b{font-family:var(--font-display);font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:var(--accent)}
+.facts span{color:var(--muted);font-size:.92rem;line-height:1.35}
+@media (min-width:860px){#pour-qui .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}}
+.sur-mesure{margin:12px 0 16px;font-family:var(--font-heading);font-weight:600;font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.3;color:var(--text)}
+@media (min-width:860px){#sur-mesure .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}}
 .fr-grid{display:grid;gap:28px;margin-top:8px}
 @media (min-width:860px){.fr-grid{grid-template-columns:auto minmax(0,1fr);gap:56px;align-items:center}}
 .fr-team{display:flex;flex-wrap:wrap;gap:24px}
@@ -796,7 +805,7 @@ td.no{color:var(--soft)}
     <div class="hs-text">
       <p class="trade">Distribution industrielle</p>
       <h1><span>La proposition technique</span> <span class="l2">part le jour de la visite</span></h1>
-      <p class="lead">En sortant de l’atelier, vos commerciaux dictent ce qu’il faut. Roulements, visserie, protection : l’app retrouve la bonne référence, le moteur de règles applique les conditions du client. C’est l’application des technico-commerciaux itinérants en distribution industrielle : fournitures, maintenance, outillage, protection.</p>
+      <p class="lead">Un atelier qui attend une pièce n’attend pas trois jours un devis. En sortant de l’atelier, vos commerciaux dictent ce qu’il faut. Roulements, visserie, protection : l’app retrouve la bonne référence, le moteur de règles applique les conditions du client. C’est l’application des technico-commerciaux itinérants en distribution industrielle : fournitures, maintenance, outillage, protection.</p>
       <div class="hero-cta">
         <a class="btn" href="/demo">Réserver une démo</a>
         <a class="btn btn-ghost" href="/comment-ca-marche">Comment ça marche</a>
@@ -809,7 +818,7 @@ td.no{color:var(--soft)}
 <nav class="page-plan" aria-label="Sur cette page"><div class="wrap"><span>Sur cette page :</span><a href="#journee">Une journée</a><a href="#exemple">Exemple de devis</a><a href="#perimetre">Ce que l’app fait</a><a href="#calcul">Calculateur</a><a href="#questions">Questions</a></div></nav>
 <section class="sec tight" id="constat">
   <div class="wrap">
-    <h2>Ce qui ralentit <span class="l2">vos commerciaux aujourd’hui</span></h2>
+    <h2>Ce qui coûte des ventes <span class="l2">à votre équipe aujourd’hui</span></h2>
     <div class="rows-wrap"><ul class="rows"><li><strong>Des désignations à rallonge.</strong><span>Une désignation technique mal recopiée, et c’est la mauvaise pièce qui part.</span></li><li><strong>La maintenance veut une réponse rapide.</strong><span>Un atelier qui attend une pièce n’attend pas trois jours un devis.</span></li><li><strong>La demande de prix attend le retour au bureau.</strong><span>Elle est notée sur un coin de carnet, chiffrée le soir ou le lendemain. Pendant ce temps, le client a demandé ailleurs.</span></li><li><strong>Chaque compte a ses conditions.</strong><span>Prix nets, remises par famille, conditions négociées : tout doit être juste, ligne par ligne.</span></li><li><strong>Un article hors catalogue bloque tout le devis.</strong><span>Il manque un prix fournisseur sur une seule ligne, et la proposition entière attend.</span></li></ul></div>
   </div>
 </section>
@@ -817,7 +826,7 @@ td.no{color:var(--soft)}
   <div class="wrap">
     <h2>Une journée de tournée, <span class="l2">de la première visite à la dernière relance</span></h2>
     <p class="sec-lead">Une tournée ordinaire de technico-commercial. Les clients et les chiffres sont fictifs ; le déroulé est celui que l’app propose.</p>
-    <div class="rows-wrap"><ul class="rows num"><li><span class="mono">7 h 45</span><div><strong>Usine, service maintenance</strong><p>Une ligne est arrêtée, il faut des roulements étanches et de la visserie inox. Le commercial dicte en sortant, deux minutes : les quantités, le délai, ce que le responsable maintenance a dit. L’app retrouve les références, le moteur de règles applique les prix nets de ce compte. La proposition part avant la visite suivante.</p></div></li><li><span class="mono">11 h</span><div><strong>Atelier en sous-sol, sans réseau</strong><p>Pas de réseau à l’intérieur. Le commercial dicte quand même : la dictée est gardée sur le téléphone et traitée dès que le réseau revient, sur le parking. Il n’a rien à refaire.</p></div></li><li><span class="mono">14 h 30</span><div><strong>Client régulier</strong><p>« Comme la dernière fois, avec deux boîtes de plus, et un joint spécial qui n’est pas au catalogue. » L’app reprend la dernière commande de ce client à partir de son historique d’achats, ajoute les deux boîtes et crée une ligne « à chiffrer » pour le joint.</p></div></li><li><span class="mono">18 h</span><div><strong>Fin de tournée</strong><p>Le sédentaire complète la ligne à chiffrer avec la cotation du fournisseur et relit la proposition, si votre organisation le prévoit. Le commercial valide et envoie depuis sa messagerie. Les comptes rendus sont dans les fiches clients, les relances sont programmées.</p></div></li></ul></div>
+    <div class="rows-wrap"><ul class="rows num"><li><span class="mono">7 h 45</span><div><strong>Usine, service maintenance</strong><p>Une ligne est arrêtée, il faut des roulements étanches et de la visserie inox. Le commercial dicte en sortant, une minute : les quantités, le délai, ce que le responsable maintenance a dit. L’app retrouve les références, le moteur de règles applique les prix nets de ce compte. La proposition part avant la visite suivante.</p></div></li><li><span class="mono">11 h</span><div><strong>Atelier en sous-sol, sans réseau</strong><p>Pas de réseau à l’intérieur. Le commercial dicte quand même : la dictée est gardée sur le téléphone et traitée dès que le réseau revient, sur le parking. Il n’a rien à refaire.</p></div></li><li><span class="mono">14 h 30</span><div><strong>Client régulier</strong><p>« Comme la dernière fois, avec deux boîtes de plus, et un joint spécial qui n’est pas au catalogue. » L’app reprend la dernière commande de ce client à partir de son historique d’achats, ajoute les deux boîtes et crée une ligne « à chiffrer » pour le joint.</p></div></li><li><span class="mono">18 h</span><div><strong>Fin de tournée</strong><p>Le sédentaire complète la ligne à chiffrer avec la cotation du fournisseur et relit la proposition, si votre organisation le prévoit. Le commercial valide et envoie depuis sa messagerie. Les comptes rendus sont dans les fiches clients, les relances sont programmées.</p></div></li></ul></div>
     <blockquote class="anecdote"><p>« Mon métier, c’était le vin, pas la distribution industrielle. Le soir, il me restait environ sept comptes rendus de visite et une ou deux propositions commerciales à rédiger, au moins deux heures d’administratif par jour. C’est ce temps-là que Kroko Labs veut rendre aux commerciaux terrain, quel que soit leur métier. »</p><cite>Maxime Fauquembergue, cofondateur, ancien commercial terrain dans le vin</cite></blockquote>
   </div>
 </section>
@@ -884,7 +893,7 @@ td.no{color:var(--soft)}
 </section>
 <section class="sec" id="calcul" data-default="industrie">
   <div class="wrap">
-    <h2>Calculez <span class="l2">le temps gagné par votre équipe</span></h2>
+    <h2>Vos chiffres, <span class="l2">les heures rendues au terrain chaque mois</span></h2>
     <p class="sec-lead">Trois réglages, une estimation en direct.</p>
     <div class="c2">
       <div class="c2-in">

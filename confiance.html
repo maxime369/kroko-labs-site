@@ -614,6 +614,15 @@ td.no{color:var(--soft)}
 .pilot-facts span{color:var(--muted)}
 
 /* Équipe */
+.facts{padding:8px 0 0}
+.facts ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:860px){.facts ul{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.facts li{display:flex;flex-direction:column;gap:4px}
+.facts b{font-family:var(--font-display);font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:var(--accent)}
+.facts span{color:var(--muted);font-size:.92rem;line-height:1.35}
+@media (min-width:860px){#pour-qui .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}}
+.sur-mesure{margin:12px 0 16px;font-family:var(--font-heading);font-weight:600;font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.3;color:var(--text)}
+@media (min-width:860px){#sur-mesure .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}}
 .fr-grid{display:grid;gap:28px;margin-top:8px}
 @media (min-width:860px){.fr-grid{grid-template-columns:auto minmax(0,1fr);gap:56px;align-items:center}}
 .fr-team{display:flex;flex-wrap:wrap;gap:24px}
@@ -909,7 +918,7 @@ td.no{color:var(--soft)}
 <section class="sec center tight" id="questions">
   <div class="wrap">
     <h2>Questions fréquentes</h2>
-    <div class="faq"><details><summary>L’IA peut-elle se tromper de prix ?</summary><p>Elle ne fixe aucun prix. Elle comprend la phrase du commercial et retrouve les références et les quantités. Les prix, remises et conditions du client sont calculés par un moteur de règles, à partir de vos tarifs. Si une référence est ambiguë, l’app pose la question. Et le commercial relit avant chaque envoi.</p></details><details><summary>Faut-il enregistrer les rendez-vous ?</summary><p>Non. Le mode par défaut est la dictée après la visite, en une à trois minutes. L’enregistrement du rendez-vous est une option, uniquement avec l’accord du client, noté dans l’app. Sans accord, on revient à la dictée.</p></details><details><summary>Et nos données ?</summary><p>Vous restez responsable de vos données : Kroko Labs agit comme sous-traitant au sens du RGPD et signe avec vous un accord de traitement des données. Elles servent uniquement à faire fonctionner l’app pour votre équipe, jamais revendues. Le lieu d’hébergement et la durée de conservation sont écrits dans ce contrat, avant le début du pilote.</p></details><details><summary>Pouvez-vous signer un accord de confidentialité ?</summary><p>Oui. Nous signons un accord de confidentialité (NDA) avant même la démo, avant que vous nous envoyiez un extrait de catalogue. Il couvre votre catalogue, vos tarifs, vos conditions clients et la liste de vos clients. Demandez-le à contact@kroko-labs.fr.</p></details></div>
+    <div class="faq"><details><summary>L’IA peut-elle se tromper de prix ?</summary><p>Elle ne fixe aucun prix. Elle comprend la phrase du commercial et retrouve les références et les quantités. Les prix, remises et conditions du client sont calculés par un moteur de règles, à partir de vos tarifs. Si une référence est ambiguë, l’app pose la question. Et le commercial relit avant chaque envoi.</p></details><details><summary>Faut-il enregistrer les rendez-vous ?</summary><p>Non. Le mode par défaut est la dictée après la visite, en une minute. L’enregistrement du rendez-vous est une option, uniquement avec l’accord du client, noté dans l’app. Sans accord, on revient à la dictée.</p></details><details><summary>Et nos données ?</summary><p>Vous restez responsable de vos données : Kroko Labs agit comme sous-traitant au sens du RGPD et signe avec vous un accord de traitement des données. Elles servent uniquement à faire fonctionner l’app pour votre équipe, jamais revendues. Le lieu d’hébergement et la durée de conservation sont écrits dans ce contrat, avant le début du pilote.</p></details><details><summary>Pouvez-vous signer un accord de confidentialité ?</summary><p>Oui. Nous signons un accord de confidentialité (NDA) avant même la démo, avant que vous nous envoyiez un extrait de catalogue. Il couvre votre catalogue, vos tarifs, vos conditions clients et la liste de vos clients. Demandez-le à contact@kroko-labs.fr.</p></details></div>
     <div class="more-row"><a class="lnk" href="/questions">Toutes les questions</a></div>
   </div>
 </section>

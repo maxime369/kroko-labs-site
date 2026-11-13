@@ -614,6 +614,15 @@ td.no{color:var(--soft)}
 .pilot-facts span{color:var(--muted)}
 
 /* Équipe */
+.facts{padding:8px 0 0}
+.facts ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:860px){.facts ul{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.facts li{display:flex;flex-direction:column;gap:4px}
+.facts b{font-family:var(--font-display);font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:var(--accent)}
+.facts span{color:var(--muted);font-size:.92rem;line-height:1.35}
+@media (min-width:860px){#pour-qui .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}}
+.sur-mesure{margin:12px 0 16px;font-family:var(--font-heading);font-weight:600;font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.3;color:var(--text)}
+@media (min-width:860px){#sur-mesure .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}}
 .fr-grid{display:grid;gap:28px;margin-top:8px}
 @media (min-width:860px){.fr-grid{grid-template-columns:auto minmax(0,1fr);gap:56px;align-items:center}}
 .fr-team{display:flex;flex-wrap:wrap;gap:24px}
@@ -1087,7 +1096,7 @@ div.a-row{cursor:default}
 <main id="contenu">
 <section class="p-hero">
   <div class="wrap">
-    <h1 class="vt"><span class="voice" aria-hidden="true"></span><span>Le commercial dicte,</span> <span class="l2">l’app prépare le devis</span></h1>
+    <h1 class="vt"><span class="voice" aria-hidden="true"></span><span>Une visite dictée,</span> <span class="l2">un devis chiffré le jour même</span></h1>
     <p class="lead">Le commercial raconte sa visite. L’app retrouve vos références, le moteur de règles calcule vos prix, la proposition sort à vos couleurs. Il relit, il envoie.</p>
     
     <div class="hero-cta"><a class="btn" href="/demo">Réserver une démo</a></div>
@@ -1096,9 +1105,9 @@ div.a-row{cursor:default}
 <section class="sec" id="comment">
   <div class="wrap">
     <h2>Les 4 étapes, <span class="l2">de la visite à l’envoi</span></h2>
-    <p class="sec-lead">Captures de l’app, avec une maison de vins fictive. Le commercial sort du Comptoir des Halles et prend deux minutes sur le parking.</p>
+    <p class="sec-lead">Captures de l’app, avec une maison de vins fictive. Le commercial sort du Comptoir des Halles et prend une minute sur le parking.</p>
     <ol class="how">
-      <li><div class="phone iphone mini"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:41</span><i class="island"></i><span class="bat"></span></div><img src="/img/app-dictee.webp" alt="Écran de dictée de l’app Kroko Labs, enregistrement en cours" width="640" height="1300" decoding="async" loading="lazy"><i class="homebar" aria-hidden="true"></i></div></div><div><h3><span class="mono">01</span>Dicter</h3><p>En sortant du rendez-vous, le commercial raconte sa visite en une à trois minutes, à l’arrêt. Si le client est d’accord, il peut aussi enregistrer le rendez-vous.</p></div></li>
+      <li><div class="phone iphone mini"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:41</span><i class="island"></i><span class="bat"></span></div><img src="/img/app-dictee.webp" alt="Écran de dictée de l’app Kroko Labs, enregistrement en cours" width="640" height="1300" decoding="async" loading="lazy"><i class="homebar" aria-hidden="true"></i></div></div><div><h3><span class="mono">01</span>Dicter</h3><p>En sortant du rendez-vous, le commercial raconte sa visite en une minute, à l’arrêt. Si le client est d’accord, il peut aussi enregistrer le rendez-vous.</p></div></li>
       <li><div class="phone iphone mini"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:42</span><i class="island"></i><span class="bat"></span></div><img src="/img/app-produits.webp" alt="Références et quantités retrouvées par l’app Kroko Labs à partir de la dictée" width="640" height="1300" decoding="async" loading="lazy"><i class="homebar" aria-hidden="true"></i></div></div><div><h3><span class="mono">02</span>Vérifier</h3><p>L’app retrouve les références et les quantités dites (« 6 caisses de Brut Réserve », soit 36 bouteilles) et applique la grille du client. Le commercial corrige d’un geste si besoin.</p></div></li>
       <li><div class="phone iphone mini"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:43</span><i class="island"></i><span class="bat"></span></div><img src="/img/app-proposition.webp" alt="Proposition chiffrée dans l’app Kroko Labs : 1 305,48 € HT pour Le Comptoir des Halles" width="640" height="1300" decoding="async" loading="lazy"><i class="homebar" aria-hidden="true"></i></div></div><div><h3><span class="mono">03</span>Chiffrer</h3><p>La proposition se construit avec vos produits et vos prix, et les conditions de ce client. Un moteur de règles calcule, l’IA ne fixe aucun prix. Trois modèles au choix, à vos couleurs, pas aux nôtres.</p></div></li>
       <li><div class="phone iphone mini"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:44</span><i class="island"></i><span class="bat"></span></div><img src="/img/app-pdf-couverture.webp" alt="Proposition PDF à la couleur du vendeur, prête à envoyer depuis l’app Kroko Labs" width="640" height="1300" decoding="async" loading="lazy"><i class="homebar" aria-hidden="true"></i></div></div><div><h3><span class="mono">04</span>Envoyer</h3><p>La proposition est prête en PDF, à vos couleurs. Il la relit, la télécharge ou la partage, et l’envoie lui-même au client depuis sa messagerie. Rien ne part tout seul.</p></div></li>
@@ -1108,7 +1117,7 @@ div.a-row{cursor:default}
 
 <section class="sec calc-dark" id="calcul" data-default="negoce">
   <div class="wrap">
-    <h2>Calculez <span class="l2">le temps gagné par votre équipe</span></h2>
+    <h2>Vos chiffres, <span class="l2">les heures rendues au terrain chaque mois</span></h2>
     <p class="sec-lead">Trois réglages, une estimation en direct.</p>
     <div class="c2">
       <div class="c2-in">
@@ -1131,7 +1140,7 @@ div.a-row{cursor:default}
 
 <section class="sec tight" id="en-plus">
   <div class="wrap">
-    <h2>Compte rendu, relance et fiche client <span class="l2">faits aussi</span></h2>
+    <h2>Le suivi de vos comptes <span class="l2">se remplit à chaque visite</span></h2>
     <div class="rows-wrap"><ul class="rows">
       <li><strong>Le compte rendu</strong><span>Rangé dans la fiche client à chaque rendez-vous, à partir de ce que le commercial a dicté.</span></li>
       <li><strong>La relance</strong><span>Proposée au bon moment. Le commercial la valide avant qu’elle parte.</span></li>
@@ -1196,8 +1205,8 @@ div.a-row{cursor:default}
 <section class="sec tight">
   <div class="wrap">
     <div class="cta-band">
-      <h2>Voyez-la avec <span class='l2'>vos produits et vos prix</span></h2>
-      <p class="sec-lead">30 minutes, en visio.</p>
+      <h2>Votre catalogue, <span class='l2'>un premier devis en 30 minutes</span></h2>
+      <p class="sec-lead">Envoyez un extrait en Excel ou CSV : nous dictons une visite devant vous et le devis sort avec vos références et vos prix.</p>
       
       <div class="hero-cta"><a class="btn" href="/demo">Réserver une démo</a><a class="lnk" href="/questions">Toutes les questions</a></div>
     </div>

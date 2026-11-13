@@ -5,7 +5,7 @@
 Pour les dirigeants et directeurs commerciaux de PME de 20 à 249 salariés qui ont des commerciaux terrain, un catalogue et des clients professionnels : vins et spiritueux, distribution industrielle, négoce de matériaux, et d’autres métiers de vente sur catalogue.
 
 Ce que fait l’app :
-- Le commercial dicte sa visite en une à trois minutes, à l’arrêt, en sortant du rendez-vous.
+- Le commercial dicte sa visite en une minute, à l’arrêt, en sortant du rendez-vous.
 - L’app retrouve les références et les quantités dans le catalogue de l’entreprise, et pose une question si un détail manque.
 - Un moteur de règles calcule prix, remises et conditions de chaque client, à partir des tarifs de l’entreprise.
 - La proposition sort aux couleurs de l’entreprise ; le compte rendu et la relance sont préparés.
