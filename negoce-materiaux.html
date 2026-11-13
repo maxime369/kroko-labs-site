@@ -697,6 +697,8 @@ td.no{color:var(--soft)}
 .phone.iphone .screen.shot img{flex:none;height:auto;object-fit:contain}
 .phone.iphone .homebar{position:absolute;left:50%;bottom:.9%;width:35%;height:.6%;border-radius:9px;background:#111;transform:translateX(-50%);opacity:.85}
 @media (min-width:960px){.hero.split .hero-phone .phone.iphone{zoom:1}}
+/* Pages secteurs : un peu plus petit, pour garder la ligne « Sur cette page » dans le premier écran */
+@media (min-width:960px){.hero.split:has(.trade) .hero-phone .phone.iphone{width:262px}}
 .phone.iphone.mini{width:min(248px,100%);height:auto;padding:8px;border-radius:44px}
 .phone.iphone.mini .screen{border-radius:36px}
 .phone.iphone.mini .status{font-size:11px}
@@ -783,7 +785,7 @@ td.no{color:var(--soft)}
         <a class="btn btn-ghost" href="/comment-ca-marche">Comment ça marche</a>
       </div>
     </div>
-    <div class="hero-phone"><div class="phone"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:43</span><span class="bat"></span></div><img src="/img/app-negoce-pdf-conditions.webp" alt="Proposition PDF de l’app Kroko Labs pour Bâtiments Morel : plaques hydro, rails et montants, total 1 500,40 € HT (données fictives)" width="640" height="1247" decoding="async"></div></div></div>
+    <div class="hero-phone"><div class="phone iphone"><div class="screen shot"><div class="status" aria-hidden="true"><span class="mono">9:43</span><i class="island"></i><span class="bat"></span></div><img src="/img/app-negoce-pdf-conditions.webp" alt="Proposition PDF de l’app Kroko Labs pour Bâtiments Morel : plaques hydro, rails et montants, total 1 500,40 € HT (données fictives)" width="640" height="1300" decoding="async"><i class="homebar" aria-hidden="true"></i></div></div></div>
   </div>
 </section>
 

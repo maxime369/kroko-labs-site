@@ -691,6 +691,8 @@ td.no{color:var(--soft)}
 .phone.iphone .screen.shot img{flex:none;height:auto;object-fit:contain}
 .phone.iphone .homebar{position:absolute;left:50%;bottom:.9%;width:35%;height:.6%;border-radius:9px;background:#111;transform:translateX(-50%);opacity:.85}
 @media (min-width:960px){.hero.split .hero-phone .phone.iphone{zoom:1}}
+/* Pages secteurs : un peu plus petit, pour garder la ligne « Sur cette page » dans le premier écran */
+@media (min-width:960px){.hero.split:has(.trade) .hero-phone .phone.iphone{width:262px}}
 .phone.iphone.mini{width:min(248px,100%);height:auto;padding:8px;border-radius:44px}
 .phone.iphone.mini .screen{border-radius:36px}
 .phone.iphone.mini .status{font-size:11px}
