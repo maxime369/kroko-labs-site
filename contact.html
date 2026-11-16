@@ -800,6 +800,10 @@ td.no{color:var(--soft)}
 .ct-founders .av img+img{margin-left:-14px}
 .ct-founders p{margin:0;color:var(--muted);font-size:.95rem}
 .ct-founders strong{color:var(--text)}
+.ct-cal-open{display:inline-block;margin:0 0 14px;font-size:.92rem;font-weight:600;color:var(--accent);text-underline-offset:4px}
+.ct-cal-frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.ct-cal-frame iframe{display:block;width:100%;height:960px;border:0}
+@media (max-width:600px){.ct-box.ct-cal{padding:22px 16px}.ct-cal-frame iframe{height:1100px}}
 .ct-sent{display:none;padding:14px 18px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
 .ct-sent.show{display:block}
 </style>
@@ -855,13 +859,11 @@ td.no{color:var(--soft)}
         </form>
       </div>
       <div class="ct-side">
-        <div class="ct-box">
-          <h2>Réservez 30 minutes</h2>
-          <p>Une démo en visio, avec un extrait de votre catalogue.</p>
-          <div class="book-hero" id="rendez-vous">
-            <button type="button" class="btn" id="bookBtn">Réserver un créneau</button>
-            <div class="book-msg" id="bookMsg" role="status">La réservation en ligne arrive. En attendant, écrivez à contact@kroko-labs.fr en proposant deux créneaux, avec un extrait de votre catalogue en Excel ou CSV.</div>
-          </div>
+        <div class="ct-box ct-cal" id="rendez-vous">
+          <h2>Choisissez un créneau</h2>
+          <p>30 minutes en visio pour parler de votre équipe et voir un devis sortir avec vos prix.</p>
+          <a class="ct-cal-open" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2oGDWCq6_Jn9aZ0qVj74skaDRX6Tw2g-a2Ib-Kp52Yikg9XaipEzbDqL3PhArQyVYbJW7XzGk5" target="_blank" rel="noopener">Ouvrir dans Google Agenda</a>
+          <div class="ct-cal-frame"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2oGDWCq6_Jn9aZ0qVj74skaDRX6Tw2g-a2Ib-Kp52Yikg9XaipEzbDqL3PhArQyVYbJW7XzGk5?gv=true" title="Choisir un rendez-vous avec Kroko Labs" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         </div>
         <a class="ct-line" href="mailto:contact@kroko-labs.fr">contact@kroko-labs.fr <span>Écrire</span></a>
         <a class="ct-line" href="tel:+33664916156">06&nbsp;64&nbsp;91&nbsp;61&nbsp;56 <span>Appeler</span></a>
