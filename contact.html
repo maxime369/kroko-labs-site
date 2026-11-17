@@ -805,6 +805,7 @@ td.no{color:var(--soft)}
 .ct-cal-frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
 .ct-cal-frame iframe{display:block;width:100%;height:960px;border:0}
 @media (max-width:600px){.ct-box.ct-cal{padding:22px 16px}.ct-cal-frame iframe{height:1100px}}
+.ct-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .ct-sent{display:none;padding:14px 18px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
 .ct-sent.show{display:block}
 </style>
@@ -843,8 +844,8 @@ td.no{color:var(--soft)}
       <div class="ct-box">
         <h2>Écrivez-nous</h2>
         <p>Nous répondons nous-mêmes, sans centre d’appels.</p>
-        <form class="ct-form" id="ctForm" method="post">
-          <noscript><p class="ct-note">Sans JavaScript, ce formulaire ne peut pas préparer votre message : écrivez directement à <a href="mailto:contact@kroko-labs.fr">contact@kroko-labs.fr</a>.</p></noscript>
+        <form class="ct-form" id="ctForm" method="post" data-relay="https://script.google.com/macros/s/AKfycbxqktPhZCp9ekqViu4V4q7bPL-Uiq9RwMXDoXXFdQ-TL3pLRQvWF4R1YBq0pRN5RB7mTQ/exec">
+          <noscript><p class="ct-note">Sans JavaScript, ce formulaire ne peut pas envoyer votre message : écrivez directement à <a href="mailto:contact@kroko-labs.fr">contact@kroko-labs.fr</a>.</p></noscript>
           <div class="two">
             <div><label for="ct-prenom">Votre prénom</label><input id="ct-prenom" name="prenom" autocomplete="given-name" required></div>
             <div><label for="ct-entreprise">Votre entreprise</label><input id="ct-entreprise" name="entreprise" autocomplete="organization"></div>
@@ -853,10 +854,12 @@ td.no{color:var(--soft)}
             <div><label for="ct-email">Votre e-mail</label><input id="ct-email" name="email" type="email" autocomplete="email" required></div>
             <div><label for="ct-tel">Votre téléphone <small>(facultatif)</small></label><input id="ct-tel" name="telephone" type="tel" autocomplete="tel"></div>
           </div>
+          <div class="ct-hp" aria-hidden="true"><label for="ct-site">Ne pas remplir</label><input id="ct-site" name="site_web" tabindex="-1" autocomplete="off"></div>
           <div><label for="ct-message">Votre message</label><textarea id="ct-message" name="message" required placeholder="Votre métier, le nombre de commerciaux terrain, ce que vous voulez voir."></textarea></div>
-          <button class="btn" type="submit">Préparer mon message</button>
-          <div class="ct-sent" id="ctSent" role="status">Votre messagerie s’est ouverte avec le message prêt : il ne reste qu’à l’envoyer. Rien ne s’est ouvert ? Écrivez à contact@kroko-labs.fr.</div>
-          <p class="ct-note">Le bouton ouvre votre messagerie avec le message déjà écrit ; rien n’est envoyé sans vous. Vos informations servent uniquement à vous répondre. <a href="/confidentialite">Confidentialité</a></p>
+          <button class="btn" type="submit">Envoyer mon message</button>
+          <div class="ct-sent" id="ctSent" role="status">Merci, votre message est bien arrivé. Nous vous répondons rapidement.</div>
+          <div class="ct-sent" id="ctFail" role="status">L’envoi n’a pas abouti. <a id="ctMail" href="mailto:contact@kroko-labs.fr">Ouvrez votre messagerie avec le message prêt</a>, ou écrivez à contact@kroko-labs.fr.</div>
+          <p class="ct-note">Votre message arrive directement chez les fondateurs. Vos informations servent uniquement à vous répondre. <a href="/confidentialite">Confidentialité</a></p>
         </form>
       </div>
       <div class="ct-side">
@@ -992,16 +995,28 @@ document.querySelectorAll(".voice").forEach(v => {
 /* Thème : le site reste en blanc et violet (choix clair ou sombre retiré le 5 novembre 2026) */
 try { localStorage.removeItem("nego-theme"); } catch (e) {}
 
-/* Formulaire de contact : ouvre la messagerie du visiteur avec le message prêt */
+/* Formulaire de contact : envoie le message au relais Google, qui le poste dans Slack.
+   En cas d'échec, propose d'ouvrir la messagerie avec le message prêt. */
 const ctForm = document.getElementById("ctForm");
-if (ctForm) ctForm.addEventListener("submit", e => {
+if (ctForm) ctForm.addEventListener("submit", async e => {
   e.preventDefault();
   if (!ctForm.reportValidity()) return;
   const v = n => (ctForm.elements[n].value || "").trim();
+  const btn = ctForm.querySelector("button[type=submit]");
+  const ok = document.getElementById("ctSent"), ko = document.getElementById("ctFail");
+  ok.classList.remove("show"); ko.classList.remove("show");
+  btn.disabled = true; btn.textContent = "Envoi en cours…";
+  let sent = false;
+  try {
+    const r = await fetch(ctForm.dataset.relay, {method: "POST", body: new URLSearchParams(new FormData(ctForm))});
+    sent = (await r.json()).ok === true;
+  } catch (err) { sent = false; }
+  btn.disabled = false; btn.textContent = "Envoyer mon message";
+  if (sent) { ok.classList.add("show"); ctForm.reset(); return; }
   const subject = "Contact site Kroko Labs" + (v("entreprise") ? " · " + v("entreprise") : "");
   const body = [v("message"), "", "—", v("prenom") + (v("entreprise") ? ", " + v("entreprise") : ""), v("email"), v("telephone")].filter((x, i) => x || i < 3).join("\n");
-  location.href = "mailto:contact@kroko-labs.fr?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-  document.getElementById("ctSent").classList.add("show");
+  document.getElementById("ctMail").href = "mailto:contact@kroko-labs.fr?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  ko.classList.add("show");
 });
 </script>
 </body>
